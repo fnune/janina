@@ -10,6 +10,7 @@ The typeface of choice is [Inter](https://github.com/rsms/inter).
 
 | Command                 | Description                                                                                                               |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `yarn storybook`        | Runs [Storybook](https://github.com/storybookjs/storybook) for development using a config that mimics `yarn build`        |
 | `yarn start`            | Builds with `build:scss` and watches for changes                                                                          |
 | `yarn build`            | Runs all build commands in succession in preparation for a release                                                        |
 | `yarn lint`             | Run [stylelint](https://github.com/stylelint/stylelint)                                                                   |
