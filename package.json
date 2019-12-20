@@ -1,0 +1,34 @@
+{
+  "name": "janina",
+  "version": "0.0.0",
+  "description": "A component library and design system with a vision of cross-platform compatibility",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --config=./.prettierrc --write '{**/,}*.{json,md,yaml,yml,ts,tsx,js,css,scss}' --ignore-path .gitignore",
+    "lint": "stylelint **/*.{css,scss}",
+    "test": "echo No tests have been added yet 🤖"
+  },
+  "engines": {
+    "npm": "Please use yarn",
+    "node": ">=12.13.1",
+    "yarn": ">=1.21.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fnune/janina.git"
+  },
+  "author": "Fausto Núñez Alberro <fausto.nunez@mailbox.org> (https://fnune.com)",
+  "license": "UNLICENSED",
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/fnune/janina/issues"
+  },
+  "homepage": "https://github.com/fnune/janina#readme",
+  "devDependencies": {
+    "prettier": "^1.19.1",
+    "stylelint": "^12.0.0",
+    "stylelint-config-prettier": "^8.0.0",
+    "stylelint-config-standard": "^19.0.0",
+    "stylelint-scss": "^3.13.0"
+  }
+}
