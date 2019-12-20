@@ -2,11 +2,17 @@
   "name": "janina",
   "version": "0.0.0",
   "description": "A component library and design system with a vision of cross-platform compatibility",
-  "main": "index.js",
+  "main": "scss/janina.scss",
   "scripts": {
-    "format": "prettier --config=./.prettierrc --write '{**/,}*.{json,md,yaml,yml,ts,tsx,js,css,scss}' --ignore-path .gitignore",
+    "format": "prettier --config=./.prettierrc --write '{**/,}*.{json,md,yaml,yml,ts,tsx,js,css,scss}'",
     "lint": "stylelint **/*.{css,scss}",
-    "test": "echo No tests have been added yet 🤖"
+    "test": "echo No tests have been added yet 🤖",
+    "build": "yarn build:clean && yarn build:scss && yarn build:autoprefix && yarn build:cleancss",
+    "build:autoprefix": "postcss --use autoprefixer --map false --output css/janina.css css/janina.css",
+    "build:cleancss": "cleancss -o css/janina.min.css css/janina.css",
+    "build:clean": "rimraf css",
+    "build:scss": "sass --style=expanded --source-map scss/janina.scss css/janina.css",
+    "start": "yarn build:scss --watch"
   },
   "engines": {
     "npm": "Please use yarn",
@@ -25,7 +31,12 @@
   },
   "homepage": "https://github.com/fnune/janina#readme",
   "devDependencies": {
+    "autoprefixer": "^9.7.3",
+    "clean-css-cli": "^4.3.0",
+    "postcss-cli": "^6.1.3",
     "prettier": "^1.19.1",
+    "rimraf": "^3.0.0",
+    "sass": "^1.23.7",
     "stylelint": "^12.0.0",
     "stylelint-config-prettier": "^8.0.0",
     "stylelint-config-standard": "^19.0.0",
