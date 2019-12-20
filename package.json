@@ -2,7 +2,7 @@
   "name": "janina",
   "version": "0.0.0",
   "description": "A component library and design system with a vision of cross-platform compatibility",
-  "main": "index.js",
+  "main": "scss/base.scss",
   "scripts": {
     "format": "prettier --config=./.prettierrc --write '{**/,}*.{json,md,yaml,yml,ts,tsx,js,css,scss}' --ignore-path .gitignore",
     "lint": "stylelint **/*.{css,scss}",
