@@ -7,14 +7,12 @@ $warning: $yellow;
 $danger: $red;
 
 // Type
-$type--darkest: $dark;
-$type--dark: $dark-85;
-$type--medium: $dark-75;
-$type--light: $dark-50;
+$type--dark: $dark--shade;
+$type--light: $dark--tint;
 $type--white: $white;
-$type--accent: $red;
-$type--link: $red;
-$type--link-hover: $red--dark;
+$type--accent: $blue;
+$type--link: $blue;
+$type--link-hover: $blue--tint;
 $type--success: $green;
 $type--info: $blue;
 $type--warning: $yellow;
@@ -25,7 +23,7 @@ $button-primary-background: $red;
 $button-primary-color: $white;
 
 $button-secondary-background: $white;
-$button-secondary-border: $light-110;
+$button-secondary-border: $light--tint;
 $button-secondary-color: $dark;
 
 // Icons
