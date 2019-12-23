@@ -1,0 +1,17 @@
+$hue-size: 100px;
+$hue-gap: 10px;
+
+.hues {
+  display: flex;
+  flex-wrap: wrap;
+  padding: $hue-gap $hue-gap 0;
+
+  > * + * {
+    margin-left: $hue-gap;
+  }
+}
+
+.hue {
+  height: $hue-size;
+  width: $hue-size;
+}

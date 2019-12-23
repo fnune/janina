@@ -1,40 +1,92 @@
-@use 'sass:color';
+/**
+* The colors file contains variables that define how hues from the palette are
+* used across the app or website. They should be what users of janina override
+* to theme the library.
+*/
 
-$saturation--tint: 5%;
-$saturation--shade: -5%;
-$lightness--tint: 15%;
-$lightness--shade: -15%;
+@import 'palette';
 
-@function tint($color) {
-  @return color.adjust($color, $lightness: $lightness--tint, $saturation: $saturation--tint);
+$success: $green !default;
+$info: $blue !default;
+$warning: $orange !default;
+$danger: $red !default;
+
+$text-dark: $dark-shade !default;
+$text-light: $dark-tint !default;
+$text-white: $white !default;
+$text-accent: $blue !default;
+$text-link: $blue !default;
+$text-success: $green !default;
+$text-info: $blue !default;
+$text-warning: $orange !default;
+$text-danger: $red !default;
+
+$icon-dark: $dark !default;
+$icon-white: $white !default;
+$icon-accent: $red !default;
+$icon-success: $success !default;
+$icon-info: $info !default;
+$icon-warning: $warning !default;
+$icon-danger: $danger !default;
+
+$text-colors: (
+  'dark': $text-dark,
+  'light': $text-light,
+  'white': $text-white,
+  'accent': $text-accent,
+  'link': $text-link,
+  'success': $text-success,
+  'info': $text-info,
+  'warning': $text-warning,
+  'danger': $text-danger,
+) !default;
+
+@each $name, $color in $text-colors {
+  .has-text-#{$name} {
+    color: $color;
+  }
 }
 
-@function shade($color) {
-  @return color.adjust($color, $lightness: $lightness--shade, $saturation: $saturation--shade);
+$icon-colors: (
+  'dark': $icon-dark,
+  'white': $icon-white,
+  'accent': $icon-accent,
+  'success': $icon-success,
+  'info': $icon-info,
+  'warning': $icon-warning,
+  'danger': $icon-danger,
+) !default;
+
+@each $name, $color in $icon-colors {
+  .has-icon-#{$name} {
+    fill: $color;
+  }
 }
 
-$white: #ffffff;
+$background-colors: (
+  'white': $white,
+  'dark': $dark,
+  'dark-tint': $dark-tint,
+  'dark-shade': $dark-shade,
+  'light': $light,
+  'light-tint': $light-tint,
+  'light-shade': $light-shade,
+  'orange': $orange,
+  'orange-tint': $orange-tint,
+  'orange-shade': $orange-shade,
+  'red': $red,
+  'red-tint': $red-tint,
+  'red-shade': $red-shade,
+  'blue': $blue,
+  'blue-tint': $blue-tint,
+  'blue-shade': $blue-shade,
+  'green': $green,
+  'green-tint': $green-tint,
+  'green-shade': $green-shade,
+) !default;
 
-$dark: #2b2c34;
-$dark--tint: tint($dark);
-$dark--shade: shade($dark);
-
-$light: #d1d1e9;
-$light--tint: tint($light);
-$light--shade: shade($light);
-
-$yellow: #fde24f;
-$yellow--tint: tint($yellow);
-$yellow--shade: shade($yellow);
-
-$red: #ff5470;
-$red--tint: tint($red);
-$red--shade: shade($red);
-
-$blue: #6246ea;
-$blue--tint: tint($blue);
-$blue--shade: shade($blue);
-
-$green: #00ebc7;
-$green--tint: tint($green);
-$green--shade: shade($green);
+@each $name, $color in $background-colors {
+  .has-background-#{$name} {
+    background-color: $color;
+  }
+}

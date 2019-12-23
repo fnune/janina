@@ -1,22 +1,22 @@
-@mixin font--primary-light {
+@mixin font-primary-light {
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 300;
 }
 
-@mixin font--primary-regular {
+@mixin font-primary-regular {
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: normal;
 }
 
-@mixin font--primary-medium {
+@mixin font-primary-medium {
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 500;
 }
 
-@mixin font--primary-semibold {
+@mixin font-primary-semibold {
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 600;
