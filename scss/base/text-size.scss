@@ -17,49 +17,49 @@ $m-b4: $m-b3 * $mobile-ms; // XL Heading
 $m-b5: $m-b4 * $mobile-ms; // XXL Heading
 $m-b6: $m-b5 * $mobile-ms; // XXXL Heading
 
-@mixin size--base-0 {
+@mixin size-base-0 {
   font-size: $m-b0;
   @include breakpoint(sm) {
     font-size: $d-b0;
   }
 }
 
-@mixin size--base-1 {
+@mixin size-base-1 {
   font-size: $m-b1;
   @include breakpoint(sm) {
     font-size: $d-b1;
   }
 }
 
-@mixin size--base-2 {
+@mixin size-base-2 {
   font-size: $m-b2;
   @include breakpoint(sm) {
     font-size: $d-b2;
   }
 }
 
-@mixin size--base-3 {
+@mixin size-base-3 {
   font-size: $m-b3;
   @include breakpoint(sm) {
     font-size: $d-b3;
   }
 }
 
-@mixin size--base-4 {
+@mixin size-base-4 {
   font-size: $m-b4;
   @include breakpoint(sm) {
     font-size: $d-b4;
   }
 }
 
-@mixin size--base-5 {
+@mixin size-base-5 {
   font-size: $m-b5;
   @include breakpoint(sm) {
     font-size: $d-b5;
   }
 }
 
-@mixin size--base-6 {
+@mixin size-base-6 {
   font-size: $m-b6;
   @include breakpoint(sm) {
     font-size: $d-b6;
