@@ -1162,4 +1162,62 @@ th:not([align]) {
   }
 }
 
+/**
+ * The palette file maps variables to hex values with two stops
+ * each (tint and shade) that provide all the variations necessary
+ * for the colors file.
+ */
+.button {
+  display: inline-block;
+  white-space: nowrap;
+  cursor: pointer;
+  outline: none;
+  height: 40px;
+  line-height: 40px;
+  font-size: 15px;
+  padding: 0 14px;
+  border: none;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+  font-weight: bold;
+  box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.button:hover {
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+  box-shadow: 0 10px 18px rgba(50, 50, 93, 0.1), 0 4px 6px rgba(0, 0, 0, 0.08);
+}
+.button:active {
+  -webkit-transform: translateY(1px);
+          transform: translateY(1px);
+}
+.button.primary {
+  color: #ffffff;
+  text-shadow: 0 1px 3px rgba(64, 32, 221, 0.4);
+  background: linear-gradient(60deg, #4020dd 0%, #6246ea 50%, #8670f3 100%);
+  background-size: 200% 40px;
+  background-position: 0 0;
+}
+.button.primary:hover {
+  background-position: 100% -100%;
+}
+.button.primary:active {
+  color: #f3f3fa;
+}
+.button.secondary {
+  color: #6246ea;
+  text-shadow: 0 1px 6px rgba(134, 112, 243, 0.4);
+  background-color: #ffffff;
+}
+.button.secondary:hover {
+  color: #8670f3;
+}
+.button.secondary:active {
+  color: #4020dd;
+}
+
 /*# sourceMappingURL=janina.css.map */
