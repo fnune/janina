@@ -1,0 +1,64 @@
+@use '../base/palette';
+@use '../base/colors';
+
+$primary: $blue;
+$primary-tint: $blue-tint;
+$primary-shade: $blue-shade;
+
+.field {
+  display: flex;
+  flex-direction: column;
+
+  span {
+    color: $text-light;
+    font-size: 14px;
+    padding-left: 4px;
+    padding-bottom: 4px;
+    transition: all 0.2s ease;
+  }
+
+  &.horizontal {
+    align-items: baseline;
+    flex-direction: row;
+
+    span {
+      flex: 1 1 32%;
+      font-weight: 500;
+      font-size: 16px;
+      padding: 0 10px 0 0;
+      color: $text-light;
+    }
+
+    input {
+      flex: 1 1 68%;
+    }
+  }
+
+  &:focus-within {
+    span {
+      color: $primary-tint;
+    }
+  }
+}
+
+.input {
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.2s ease;
+  padding: 0 10px;
+  border-radius: 4px;
+  color: $text-dark;
+  border: 1px solid transparent;
+  background-color: $light-tint;
+
+  &::placeholder {
+    color: $light-shade;
+  }
+
+  &:focus {
+    border: 1px solid $primary-tint;
+    background-color: $white;
+  }
+}

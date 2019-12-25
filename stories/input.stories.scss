@@ -1,0 +1,9 @@
+.inputs {
+  padding-top: 150px;
+  width: 600px;
+  margin: 0 auto;
+
+  > * + * {
+    margin-top: 18px;
+  }
+}
