@@ -1,5 +1,6 @@
 @use '../base/palette';
 @use '../base/colors';
+@use '../base/text-size';
 
 $primary: $blue;
 $primary-tint: $blue-tint;
@@ -11,10 +12,10 @@ $primary-shade: $blue-shade;
 
   span {
     color: $text-light;
-    font-size: 14px;
     padding-left: 4px;
     padding-bottom: 4px;
     transition: all 0.2s ease;
+    @include size-base-0;
   }
 
   &.horizontal {
@@ -24,9 +25,9 @@ $primary-shade: $blue-shade;
     span {
       flex: 1 1 32%;
       font-weight: 500;
-      font-size: 16px;
       padding: 0 10px 0 0;
       color: $text-light;
+      @include size-base-1;
     }
 
     input {
@@ -44,7 +45,6 @@ $primary-shade: $blue-shade;
 .input {
   height: 40px;
   line-height: 40px;
-  font-size: 16px;
   outline: none;
   transition: all 0.2s ease;
   padding: 0 10px;
@@ -52,6 +52,7 @@ $primary-shade: $blue-shade;
   color: $text-dark;
   border: 1px solid transparent;
   background-color: $light-tint;
+  @include size-base-1;
 
   &::placeholder {
     color: $light-shade;

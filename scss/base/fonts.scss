@@ -21,3 +21,9 @@
   font-style: normal;
   font-weight: 600;
 }
+
+@mixin font-primary-bold {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
