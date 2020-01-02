@@ -1,37 +1,30 @@
 @import '../base/fonts', '../base/text-size';
 
-// Heading XXLarge
-@mixin heading-xxlarge {
-  @include size-base-6;
-  @include font-primary-light;
-  line-height: 1.2;
-}
-
 // Heading XLarge
 @mixin heading-xlarge {
   @include size-base-5;
-  @include font-primary-light;
+  @include font-primary-bold;
   line-height: 1.2;
 }
 
 // Heading Large
 @mixin heading-large {
   @include size-base-4;
-  @include font-primary-light;
+  @include font-primary-semibold;
   line-height: 1.3;
 }
 
-// Heading Medium
-@mixin heading-medium {
+// Heading semibold
+@mixin heading-semibold {
   @include size-base-3;
-  @include font-primary-regular;
+  @include font-primary-semibold;
   line-height: 1.3;
 }
 
 // Heading Small
 @mixin heading-small {
   @include size-base-2;
-  @include font-primary-medium;
+  @include font-primary-semibold;
   line-height: 1.3;
 }
 
@@ -45,31 +38,29 @@
 // Heading XXSmall
 @mixin heading-xxsmall {
   @include size-base-0;
-  @include font-primary-medium;
-  letter-spacing: 1px;
+  @include font-primary-semibold;
   line-height: 1.4;
-  text-transform: uppercase;
 }
 
 // Body Large
 @mixin body-large {
   @include size-base-2;
   @include font-primary-regular;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 // Body
 @mixin body {
   @include size-base-1;
   @include font-primary-regular;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 // Fine Print
 @mixin fine-print {
   @include size-base-0;
   @include font-primary-regular;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 // Header button
@@ -99,7 +90,7 @@
 @mixin header-index-text-type {
   @include size-base-1;
   @include font-primary-light;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 // inner-page-nav-link
@@ -129,5 +120,5 @@
 @mixin type-list {
   @include size-base-1;
   @include font-primary-regular;
-  line-height: 1.2;
+  line-height: 1.6;
 }

@@ -95,7 +95,7 @@ th:not([align]) {
  * for the colors file.
  */
 .has-text-dark {
-  color: #151517;
+  color: #2b2c34;
 }
 
 .has-text-light {
@@ -1226,6 +1226,248 @@ th:not([align]) {
  * each (tint and shade) that provide all the variations necessary
  * for the colors file.
  */
+.content {
+  font-size: 1.15em;
+  color: #2b2c34;
+}
+@media (min-width: 768px) {
+  .content {
+    font-size: 1em;
+  }
+}
+.content h1 {
+  font-size: 2.38464em;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 0.7ex;
+  margin-bottom: 0.7ex;
+}
+@media (min-width: 768px) {
+  .content h1 {
+    font-size: 2.8561em;
+  }
+}
+@media (min-width: 768px) {
+  .content h1 {
+    margin-top: 1ex;
+    margin-bottom: 1ex;
+  }
+}
+.content h2 {
+  font-size: 1.9872em;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-top: 0.7ex;
+  margin-bottom: 0.7ex;
+}
+@media (min-width: 768px) {
+  .content h2 {
+    font-size: 2.197em;
+  }
+}
+@media (min-width: 768px) {
+  .content h2 {
+    margin-top: 1ex;
+    margin-bottom: 1ex;
+  }
+}
+.content h3 {
+  font-size: 1.656em;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-top: 0.7ex;
+  margin-bottom: 0.7ex;
+}
+@media (min-width: 768px) {
+  .content h3 {
+    font-size: 1.69em;
+  }
+}
+@media (min-width: 768px) {
+  .content h3 {
+    margin-top: 1ex;
+    margin-bottom: 1ex;
+  }
+}
+.content h4 {
+  font-size: 1.38em;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-top: 0.7ex;
+  margin-bottom: 0.7ex;
+}
+@media (min-width: 768px) {
+  .content h4 {
+    font-size: 1.3em;
+  }
+}
+@media (min-width: 768px) {
+  .content h4 {
+    margin-top: 1ex;
+    margin-bottom: 1ex;
+  }
+}
+.content h5 {
+  font-size: 1.15em;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-top: 0.7ex;
+  margin-bottom: 0.7ex;
+}
+@media (min-width: 768px) {
+  .content h5 {
+    font-size: 1em;
+  }
+}
+@media (min-width: 768px) {
+  .content h5 {
+    margin-top: 1ex;
+    margin-bottom: 1ex;
+  }
+}
+.content h6 {
+  font-size: 0.9em;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-top: 0.7ex;
+  margin-bottom: 0.7ex;
+}
+@media (min-width: 768px) {
+  .content h6 {
+    font-size: 0.8em;
+  }
+}
+@media (min-width: 768px) {
+  .content h6 {
+    margin-top: 1ex;
+    margin-bottom: 1ex;
+  }
+}
+.content ul {
+  margin-top: 1.4ex;
+  margin-bottom: 1.4ex;
+  padding-left: 1.4ex;
+  font-size: 1.15em;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.6;
+  list-style: disc;
+}
+@media (min-width: 768px) {
+  .content ul {
+    margin-top: 2ex;
+    margin-bottom: 2ex;
+  }
+}
+@media (min-width: 768px) {
+  .content ul {
+    padding-left: 2ex;
+  }
+}
+@media (min-width: 768px) {
+  .content ul {
+    font-size: 1em;
+  }
+}
+.content p {
+  font-size: 1.15em;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.6;
+  margin-top: 1.4ex;
+  margin-bottom: 1.4ex;
+}
+@media (min-width: 768px) {
+  .content p {
+    font-size: 1em;
+  }
+}
+@media (min-width: 768px) {
+  .content p {
+    margin-top: 2ex;
+    margin-bottom: 2ex;
+  }
+}
+.content pre,
+.content code {
+  font-size: 100%;
+  line-height: 100%;
+  font-family: monospace;
+}
+.content blockquote {
+  padding-left: 1.4ex;
+  padding-right: 1.4ex;
+}
+@media (min-width: 768px) {
+  .content blockquote {
+    padding-left: 2ex;
+    padding-right: 2ex;
+  }
+}
+.content time {
+  font-size: inherit;
+  line-height: inherit;
+}
+.content a {
+  color: #6246ea;
+}
+.content a:visited {
+  color: #6246ea;
+}
+.content a:focus {
+  color: #ff5470;
+}
+.content b,
+.content strong {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+}
+.content hr {
+  margin-top: 2.8ex;
+  margin-bottom: 2.8ex;
+  background-color: #d1d1e9;
+  border: none;
+  height: 1px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+}
+@media (min-width: 768px) {
+  .content hr {
+    margin-top: 4ex;
+    margin-bottom: 4ex;
+  }
+}
+
+.compact {
+  font-size: 0.9em;
+}
+@media (min-width: 768px) {
+  .compact {
+    font-size: 0.8em;
+  }
+}
+
+/**
+ * The palette file maps variables to hex values with two stops
+ * each (tint and shade) that provide all the variations necessary
+ * for the colors file.
+ */
 /**
 * The colors file contains variables that define how hues from the palette are
 * used across the app or website. They should be what users of janina override
@@ -1237,7 +1479,7 @@ th:not([align]) {
  * for the colors file.
  */
 .has-text-dark {
-  color: #151517;
+  color: #2b2c34;
 }
 
 .has-text-light {
@@ -1385,11 +1627,16 @@ th:not([align]) {
 }
 .field span {
   color: #3e4154;
-  font-size: 14px;
   padding-left: 4px;
   padding-bottom: 4px;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
+  font-size: 0.9em;
+}
+@media (min-width: 768px) {
+  .field span {
+    font-size: 0.8em;
+  }
 }
 .field.horizontal {
   -webkit-box-align: baseline;
@@ -1402,9 +1649,14 @@ th:not([align]) {
   -webkit-box-flex: 1;
           flex: 1 1 32%;
   font-weight: 500;
-  font-size: 16px;
   padding: 0 10px 0 0;
   color: #3e4154;
+  font-size: 1.15em;
+}
+@media (min-width: 768px) {
+  .field.horizontal span {
+    font-size: 1em;
+  }
 }
 .field.horizontal input {
   -webkit-box-flex: 1;
@@ -1417,15 +1669,20 @@ th:not([align]) {
 .input {
   height: 40px;
   line-height: 40px;
-  font-size: 16px;
   outline: none;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
   padding: 0 10px;
   border-radius: 4px;
-  color: #151517;
+  color: #2b2c34;
   border: 1px solid transparent;
   background-color: #f3f3fa;
+  font-size: 1.15em;
+}
+@media (min-width: 768px) {
+  .input {
+    font-size: 1em;
+  }
 }
 .input::-webkit-input-placeholder {
   color: #b1b1d6;
