@@ -26,7 +26,6 @@
   },
   "author": "Fausto Núñez Alberro <fausto.nunez@mailbox.org> (https://fnune.com)",
   "license": "UNLICENSED",
-  "private": true,
   "bugs": {
     "url": "https://github.com/fnune/janina/issues"
   },
