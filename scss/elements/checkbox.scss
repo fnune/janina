@@ -1,0 +1,74 @@
+@use '../base/text-size';
+
+$primary: $blue;
+$primary-tint: $blue-tint;
+$primary-shade: $blue-shade;
+
+$common-pseudo-translate: translateY(-50%);
+
+$checkbox-size: 1.3em;
+
+%common-pseudo {
+  content: '';
+  height: $checkbox-size;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  transform: $common-pseudo-translate;
+  transition: all 0.2s ease;
+  width: $checkbox-size;
+}
+
+// TODO: Try Alex's/the polished way of hiding the input, and then put the
+// pseudo-elements on the input instead of on the accompanying span.
+.checkbox {
+  @include size-base-1;
+  @include font-primary-regular;
+  line-height: 1.8;
+  display: block;
+  position: relative;
+  cursor: pointer;
+  padding-left: 2em;
+
+  > input {
+    position: absolute;
+    opacity: 0;
+  }
+
+  input + * {
+    color: $text-dark;
+
+    &:after {
+      @extend %common-pseudo;
+      background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSI2NHB4IiBoZWlnaHQ9IjY0cHgiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgNjQgNjQiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxnPjxwb2x5Z29uIHBvaW50cz0iMTMuNzA3LDMyLjI5MyAxMi4yOTMsMzMuODU0IDI0LjI5Myw0NiAyNS43MDcsNDYgNDkuNzA3LDIxLjg1NCA0OC4yOTMsMjAuMzY2IDI1LDQzLjYyMyAiLz48L2c+PC9zdmc+)
+        no-repeat center;
+      background-size: contain;
+      transform: $common-pseudo-translate scale(0);
+    }
+
+    &:before {
+      @extend %common-pseudo;
+      border-radius: 4px;
+      border: 1px solid transparent;
+      background-color: $light-tint;
+    }
+  }
+
+  input:checked + * {
+    &:after {
+      transform: $common-pseudo-translate scale(1);
+    }
+
+    &:before {
+      background-color: $white;
+      border: 1px solid $primary-tint;
+      box-shadow: none;
+    }
+  }
+
+  input:focus + * {
+    &:before {
+      box-shadow: 0 0 1px 1px $light;
+    }
+  }
+}
