@@ -1,28 +1,30 @@
-.card-container {
-  align-items: flex-start;
-  display: flex;
-  justify-content: center;
-  padding: 100px;
+.story__ {
+  &card-container {
+    align-items: flex-start;
+    display: flex;
+    justify-content: center;
+    padding: 100px;
 
-  > * + * {
-    margin-left: 80px;
+    > * + * {
+      margin-left: 80px;
+    }
   }
-}
 
-.card-story {
-  width: 600px;
+  &card {
+    width: 600px;
 
-  > * + * {
-    margin-top: 18px;
+    > * + * {
+      margin-top: 18px;
+    }
   }
-}
 
-.card-buttons {
-  padding-top: 16px;
-  display: flex;
-  justify-content: flex-end;
+  &card-buttons {
+    padding-top: 16px;
+    display: flex;
+    justify-content: flex-end;
 
-  > * + * {
-    margin-left: 16px;
+    > * + * {
+      margin-left: 16px;
+    }
   }
 }

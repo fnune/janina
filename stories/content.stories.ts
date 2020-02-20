@@ -5,7 +5,7 @@ export default {
 }
 
 export const content = () => `
-  <div class="content content-container">
+  <div class="story__content content">
     <h1>A letter from Janina</h1>
     <p>We can’t connect to the server at github.com.</p>
     <h2>Secondary title</h2>
@@ -27,7 +27,7 @@ export const content = () => `
 `
 
 export const blogPost = () => `
-  <article class="content content-container">
+  <article class="story__content content">
     <header>
       <h1>How to listen to music</h1>
       <time datetime="2018-04-28T11:03:00+02:00">Saturday, April 28, 2018</time>
@@ -167,7 +167,7 @@ export const blogPost = () => `
 `
 
 export const compactContent = () => `
-  <div class="content content-container compact">
+  <div class="story__content content compact">
     <h1>A letter from Janina</h1>
     <p>We can’t connect to the server at github.com.</p>
     <h2>Secondary title</h2>
@@ -189,7 +189,7 @@ export const compactContent = () => `
 `
 
 export const compactBlogPost = () => `
-  <article class="content content-container compact">
+  <article class="story__content content compact">
     <header>
       <h1>How to listen to music</h1>
       <time datetime="2018-04-28T11:03:00+02:00">Saturday, April 28, 2018</time>

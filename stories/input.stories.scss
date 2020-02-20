@@ -1,9 +1,11 @@
-.inputs {
-  padding-top: 150px;
-  width: 600px;
-  margin: 0 auto;
+.story__ {
+  &inputs {
+    padding-top: 150px;
+    width: 600px;
+    margin: 0 auto;
 
-  > * + * {
-    margin-top: 18px;
+    > * + * {
+      margin-top: 18px;
+    }
   }
 }

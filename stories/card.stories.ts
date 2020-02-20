@@ -5,8 +5,8 @@ export default {
 }
 
 export const Default = () => `
-  <div class="card-container">
-    <div class="card card-story content">
+  <div class="story__card-container">
+    <div class="story__card card content">
       <h3>This is a card</h3>
       <p>You can put anything you want in it. It's just a container with a shadow and some padding.</p>
       <ul>
@@ -14,12 +14,12 @@ export const Default = () => `
         <li>Cebuano 5,378,789</li>
         <li>Swedish 3,744,691</li>
       </ul>
-      <div class="card-buttons">
+      <div class="story__card-buttons">
         <button class="button primary">Alright, tell me more</button>
         <button class="button secondary">Nevermind</button>
       </div>
     </div>
-    <div class="card card-story content">
+    <div class="story__card card content">
       <label class="field horizontal" for="first-name">
         <span>First name</span>
         <input id="first-name" placeholder="Jane" class="input" />
@@ -36,7 +36,7 @@ export const Default = () => `
         <span>Company website</span>
         <input id="website" placeholder="example.com" class="input" />
       </label>
-      <div class="card-buttons">
+      <div class="story__card-buttons">
         <button class="button primary">Sign me up</button>
       </div>
     </div>

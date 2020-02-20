@@ -5,7 +5,7 @@ export default {
 }
 
 export const horizontal = () => `
-  <form class="inputs">
+  <form class="story__inputs">
     <label class="field horizontal" for="first-name">
       <span>First name</span>
       <input id="first-name" placeholder="Jane" class="input" />
@@ -26,7 +26,7 @@ export const horizontal = () => `
 `
 
 export const vertical = () => `
-  <form class="inputs">
+  <form class="story__inputs">
     <label class="field" for="first-name">
       <span>First name</span>
       <input id="first-name" placeholder="Jane" class="input" />
