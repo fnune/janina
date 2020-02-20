@@ -1181,19 +1181,15 @@ th:not([align]) {
   letter-spacing: 0.04em;
   font-weight: bold;
   box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-  -webkit-transition: all 0.2s ease;
+  transform: translateY(0);
   transition: all 0.2s ease;
 }
 .button:hover {
-  -webkit-transform: translateY(-1px);
-          transform: translateY(-1px);
+  transform: translateY(-1px);
   box-shadow: 0 10px 18px rgba(50, 50, 93, 0.1), 0 4px 6px rgba(0, 0, 0, 0.08);
 }
 .button:active {
-  -webkit-transform: translateY(1px);
-          transform: translateY(1px);
+  transform: translateY(1px);
 }
 .button.primary {
   color: #ffffff;
@@ -1219,6 +1215,14 @@ th:not([align]) {
 }
 .button.secondary:active {
   color: #4020dd;
+}
+
+.card {
+  position: relative;
+  padding: 2.15rem;
+  border-radius: 4px;
+  background-color: white;
+  box-shadow: 0 4px 7px rgba(50, 50, 93, 0.05), 0 2px 15px 10px rgba(0, 0, 0, 0.01);
 }
 
 /**
@@ -1453,6 +1457,10 @@ th:not([align]) {
     margin-bottom: 4ex;
   }
 }
+.content > *:first-child,
+.content > *:first-child > *:first-child {
+  margin-top: 0;
+}
 
 .compact {
   font-size: 0.9em;
@@ -1619,17 +1627,13 @@ th:not([align]) {
 }
 
 .field {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-direction: column;
+  flex-direction: column;
 }
 .field span {
   color: #3e4154;
   padding-left: 4px;
   padding-bottom: 4px;
-  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
   font-size: 0.9em;
 }
@@ -1639,15 +1643,11 @@ th:not([align]) {
   }
 }
 .field.horizontal {
-  -webkit-box-align: baseline;
-          align-items: baseline;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-direction: row;
+  align-items: baseline;
+  flex-direction: row;
 }
 .field.horizontal span {
-  -webkit-box-flex: 1;
-          flex: 1 1 32%;
+  flex: 1 1 32%;
   font-weight: 500;
   padding: 0 10px 0 0;
   color: #3e4154;
@@ -1659,8 +1659,7 @@ th:not([align]) {
   }
 }
 .field.horizontal input {
-  -webkit-box-flex: 1;
-          flex: 1 1 68%;
+  flex: 1 1 68%;
 }
 .field:focus-within span {
   color: #8670f3;
@@ -1670,7 +1669,6 @@ th:not([align]) {
   height: 40px;
   line-height: 40px;
   outline: none;
-  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
   padding: 0 10px;
   border-radius: 4px;
@@ -1683,18 +1681,6 @@ th:not([align]) {
   .input {
     font-size: 1em;
   }
-}
-.input::-webkit-input-placeholder {
-  color: #b1b1d6;
-}
-.input::-moz-placeholder {
-  color: #b1b1d6;
-}
-.input:-ms-input-placeholder {
-  color: #b1b1d6;
-}
-.input::-ms-input-placeholder {
-  color: #b1b1d6;
 }
 .input::placeholder {
   color: #b1b1d6;
