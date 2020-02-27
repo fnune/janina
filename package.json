@@ -31,8 +31,8 @@
   },
   "homepage": "https://github.com/fnune/janina#readme",
   "devDependencies": {
-    "@babel/core": "^7.7.7",
-    "@storybook/html": "^5.2.8",
+    "@babel/core": "^7.8.6",
+    "@storybook/html": "^5.3.14",
     "autoprefixer": "^9.7.3",
     "babel-loader": "^8.0.6",
     "clean-css-cli": "^4.3.0",
@@ -42,7 +42,7 @@
     "postcss-loader": "^3.0.0",
     "prettier": "^1.19.1",
     "rimraf": "^3.0.0",
-    "sass": "^1.23.7",
+    "sass": "^1.26.1",
     "sass-loader": "^8.0.0",
     "style-loader": "^1.1.1",
     "stylelint": "^13.2.0",
@@ -50,6 +50,6 @@
     "stylelint-config-standard": "^20.0.0",
     "stylelint-scss": "^3.13.0",
     "ts-loader": "^6.2.1",
-    "typescript": "^3.7.3"
+    "typescript": "^3.8.2"
   }
 }

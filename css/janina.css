@@ -1682,12 +1682,80 @@ th:not([align]) {
     font-size: 1em;
   }
 }
+.input::-webkit-input-placeholder {
+  color: #b1b1d6;
+}
+.input::-moz-placeholder {
+  color: #b1b1d6;
+}
+.input:-ms-input-placeholder {
+  color: #b1b1d6;
+}
+.input::-ms-input-placeholder {
+  color: #b1b1d6;
+}
 .input::placeholder {
   color: #b1b1d6;
 }
 .input:focus {
   border: 1px solid #8670f3;
   background-color: #ffffff;
+}
+
+.checkbox input + *:before, .checkbox input + *:after {
+  content: "";
+  height: 1.3em;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.2s ease;
+  width: 1.3em;
+}
+
+.checkbox {
+  font-size: 1.15em;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.8;
+  display: block;
+  position: relative;
+  cursor: pointer;
+  padding-left: 2em;
+}
+@media (min-width: 768px) {
+  .checkbox {
+    font-size: 1em;
+  }
+}
+.checkbox > input {
+  position: absolute;
+  opacity: 0;
+}
+.checkbox input + * {
+  color: #2b2c34;
+}
+.checkbox input + *:after {
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSI2NHB4IiBoZWlnaHQ9IjY0cHgiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgNjQgNjQiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxnPjxwb2x5Z29uIHBvaW50cz0iMTMuNzA3LDMyLjI5MyAxMi4yOTMsMzMuODU0IDI0LjI5Myw0NiAyNS43MDcsNDYgNDkuNzA3LDIxLjg1NCA0OC4yOTMsMjAuMzY2IDI1LDQzLjYyMyAiLz48L2c+PC9zdmc+) no-repeat center;
+  background-size: contain;
+  transform: translateY(-50%) scale(0);
+}
+.checkbox input + *:before {
+  border-radius: 4px;
+  border: 1px solid transparent;
+  background-color: #f3f3fa;
+}
+.checkbox input:checked + *:after {
+  transform: translateY(-50%) scale(1);
+}
+.checkbox input:checked + *:before {
+  background-color: #ffffff;
+  border: 1px solid #8670f3;
+  box-shadow: none;
+}
+.checkbox input:focus + *:before {
+  box-shadow: 0 0 1px 1px #d1d1e9;
 }
 
 /*# sourceMappingURL=janina.css.map */
