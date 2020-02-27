@@ -1167,6 +1167,64 @@ th:not([align]) {
  * each (tint and shade) that provide all the variations necessary
  * for the colors file.
  */
+.radio input + *:before, .checkbox input + *:before, .radio input + *:after, .checkbox input + *:after {
+  content: "";
+  height: 1.3em;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.2s ease;
+  width: 1.3em;
+}
+
+.radio, .checkbox {
+  font-size: 1.15em;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.8;
+  display: block;
+  position: relative;
+  cursor: pointer;
+  padding-left: 2em;
+}
+@media (min-width: 768px) {
+  .radio, .checkbox {
+    font-size: 1em;
+  }
+}
+.radio > input, .checkbox > input {
+  position: absolute;
+  opacity: 0;
+}
+.radio input + *, .checkbox input + * {
+  color: #2b2c34;
+}
+.radio input + *:after, .checkbox input + *:after {
+  transform: translateY(-50%) scale(0);
+}
+.radio input + *:before, .checkbox input + *:before {
+  border: 1px solid transparent;
+  background-color: #f3f3fa;
+}
+.radio input:checked + *:after, .checkbox input:checked + *:after {
+  transform: translateY(-50%) scale(1);
+}
+.radio input:checked + *:before, .checkbox input:checked + *:before {
+  background-color: #ffffff;
+  border: 1px solid #8670f3;
+  box-shadow: none;
+}
+.radio input:focus + *:before, .checkbox input:focus + *:before {
+  box-shadow: 0 0 1px 1px #d1d1e9;
+}
+
+/**
+ * The palette file maps variables to hex values with two stops
+ * each (tint and shade) that provide all the variations necessary
+ * for the colors file.
+ */
 .button {
   display: inline-block;
   white-space: nowrap;
@@ -1225,60 +1283,11 @@ th:not([align]) {
   box-shadow: 0 4px 7px rgba(50, 50, 93, 0.05), 0 2px 15px 10px rgba(0, 0, 0, 0.01);
 }
 
-.checkbox input + *:before, .checkbox input + *:after {
-  content: "";
-  height: 1.3em;
-  left: 0;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: all 0.2s ease;
-  width: 1.3em;
-}
-
-.checkbox {
-  font-size: 1.15em;
-  font-family: "Inter", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1.8;
-  display: block;
-  position: relative;
-  cursor: pointer;
-  padding-left: 2em;
-}
-@media (min-width: 768px) {
-  .checkbox {
-    font-size: 1em;
-  }
-}
-.checkbox > input {
-  position: absolute;
-  opacity: 0;
-}
-.checkbox input + * {
-  color: #2b2c34;
-}
 .checkbox input + *:after {
-  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSI2NHB4IiBoZWlnaHQ9IjY0cHgiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgNjQgNjQiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxnPjxwb2x5Z29uIHBvaW50cz0iMTMuNzA3LDMyLjI5MyAxMi4yOTMsMzMuODU0IDI0LjI5Myw0NiAyNS43MDcsNDYgNDkuNzA3LDIxLjg1NCA0OC4yOTMsMjAuMzY2IDI1LDQzLjYyMyAiLz48L2c+PC9zdmc+) no-repeat center;
-  background-size: contain;
-  transform: translateY(-50%) scale(0);
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSI2NHB4IiBoZWlnaHQ9IjY0cHgiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgNjQgNjQiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxnPjxwb2x5Z29uIHBvaW50cz0iMTMuNzA3LDMyLjI5MyAxMi4yOTMsMzMuODU0IDI0LjI5Myw0NiAyNS43MDcsNDYgNDkuNzA3LDIxLjg1NCA0OC4yOTMsMjAuMzY2IDI1LDQzLjYyMyAiLz48L2c+PC9zdmc+) no-repeat center/contain;
 }
 .checkbox input + *:before {
   border-radius: 4px;
-  border: 1px solid transparent;
-  background-color: #f3f3fa;
-}
-.checkbox input:checked + *:after {
-  transform: translateY(-50%) scale(1);
-}
-.checkbox input:checked + *:before {
-  background-color: #ffffff;
-  border: 1px solid #8670f3;
-  box-shadow: none;
-}
-.checkbox input:focus + *:before {
-  box-shadow: 0 0 1px 1px #d1d1e9;
 }
 
 /**
@@ -1758,60 +1767,11 @@ th:not([align]) {
   background-color: #ffffff;
 }
 
-.radio input + *:before, .radio input + *:after {
-  content: "";
-  height: 1.3em;
-  left: 0;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: all 0.2s ease;
-  width: 1.3em;
-}
-
-.radio {
-  font-size: 1.15em;
-  font-family: "Inter", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1.8;
-  display: block;
-  position: relative;
-  cursor: pointer;
-  padding-left: 2em;
-}
-@media (min-width: 768px) {
-  .radio {
-    font-size: 1em;
-  }
-}
-.radio > input {
-  position: absolute;
-  opacity: 0;
-}
-.radio input + * {
-  color: #2b2c34;
-}
 .radio input + *:after {
-  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pgo8c3ZnIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPGNpcmNsZSBjeD0iMTAwIiBjeT0iMTAwIiByPSIyOCIgZmlsbD0iYmxhY2siIC8+Cjwvc3ZnPgo=) no-repeat center;
-  background-size: contain;
-  transform: translateY(-50%) scale(0);
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pgo8c3ZnIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPGNpcmNsZSBjeD0iMTAwIiBjeT0iMTAwIiByPSIyOCIgZmlsbD0iYmxhY2siIC8+Cjwvc3ZnPgo=) no-repeat center/contain;
 }
 .radio input + *:before {
   border-radius: 50%;
-  border: 1px solid transparent;
-  background-color: #f3f3fa;
-}
-.radio input:checked + *:after {
-  transform: translateY(-50%) scale(1);
-}
-.radio input:checked + *:before {
-  background-color: #ffffff;
-  border: 1px solid #8670f3;
-  box-shadow: none;
-}
-.radio input:focus + *:before {
-  box-shadow: 0 0 1px 1px #d1d1e9;
 }
 
 /*# sourceMappingURL=janina.css.map */
