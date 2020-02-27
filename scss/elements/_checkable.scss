@@ -1,0 +1,69 @@
+@use '../base/text-size';
+@import '../base/palette';
+
+$primary: $blue;
+$primary-tint: $blue-tint;
+$primary-shade: $blue-shade;
+
+$checkable-common-pseudo-translate: translateY(-50%);
+
+$checkable-size: 1.3em;
+
+%checkable-common-pseudo {
+  content: '';
+  height: $checkable-size;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  transform: $checkable-common-pseudo-translate;
+  transition: all 0.2s ease;
+  width: $checkable-size;
+}
+
+%checkable {
+  @include size-base-1;
+  @include font-primary-regular;
+  line-height: 1.8;
+  display: block;
+  position: relative;
+  cursor: pointer;
+  padding-left: 2em;
+
+  > input {
+    position: absolute;
+    opacity: 0;
+  }
+
+  input + * {
+    color: $text-dark;
+
+    &:after {
+      @extend %checkable-common-pseudo;
+      transform: $checkable-common-pseudo-translate scale(0);
+    }
+
+    &:before {
+      @extend %checkable-common-pseudo;
+      border: 1px solid transparent;
+      background-color: $light-tint;
+    }
+  }
+
+  input:checked + * {
+    &:after {
+      transform: $checkable-common-pseudo-translate scale(1);
+    }
+
+    &:before {
+      background-color: $white;
+      border: 1px solid $primary-tint;
+      box-shadow: none;
+    }
+  }
+
+  input:focus + * {
+    &:before {
+      box-shadow: 0 0 1px 1px $light;
+    }
+  }
+}
