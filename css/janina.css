@@ -1238,13 +1238,13 @@ th:not([align]) {
   border-radius: 4px;
   letter-spacing: 0.04em;
   font-weight: bold;
-  box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 7px 14px rgba(50, 50, 93, 0.05), 0 3px 6px rgba(0, 0, 0, 0.03);
   transform: translateY(0);
   transition: all 0.2s ease;
 }
 .button:hover {
   transform: translateY(-1px);
-  box-shadow: 0 10px 18px rgba(50, 50, 93, 0.1), 0 4px 6px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 18px rgba(50, 50, 93, 0.08), 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 .button:active {
   transform: translateY(1px);
@@ -1280,7 +1280,8 @@ th:not([align]) {
   padding: 2.15rem;
   border-radius: 4px;
   background-color: white;
-  box-shadow: 0 4px 7px rgba(50, 50, 93, 0.05), 0 2px 15px 10px rgba(0, 0, 0, 0.01);
+  box-shadow: 0 2px 15px 10px rgba(0, 0, 0, 0.01);
+  border: 1px solid #f3f3fa;
 }
 
 .checkbox input + *:after {
@@ -1713,7 +1714,6 @@ th:not([align]) {
 }
 .field.horizontal span {
   flex: 1 1 32%;
-  font-weight: 500;
   padding: 0 10px 0 0;
   color: #3e4154;
   font-size: 1.15em;
@@ -1738,8 +1738,7 @@ th:not([align]) {
   padding: 0 10px;
   border-radius: 4px;
   color: #2b2c34;
-  border: 1px solid transparent;
-  background-color: #f3f3fa;
+  border: 1px solid #f3f3fa;
   font-size: 1.15em;
 }
 @media (min-width: 768px) {

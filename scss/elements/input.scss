@@ -24,7 +24,6 @@ $primary-shade: $blue-shade;
 
     span {
       flex: 1 1 32%;
-      font-weight: 500;
       padding: 0 10px 0 0;
       color: $text-light;
       @include size-base-1;
@@ -50,8 +49,7 @@ $primary-shade: $blue-shade;
   padding: 0 10px;
   border-radius: 4px;
   color: $text-dark;
-  border: 1px solid transparent;
-  background-color: $light-tint;
+  border: 1px solid $light-tint;
   @include size-base-1;
 
   &::placeholder {
