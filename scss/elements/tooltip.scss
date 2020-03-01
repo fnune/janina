@@ -1,0 +1,199 @@
+$tooltip-inner-triangle-size: 8px;
+$tooltip-outer-triangle-size: 9px;
+
+$tooltip-container-gap: 1rem;
+
+%triangle-blueprint {
+  &:after,
+  &:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+  }
+
+  &:after {
+    border: $tooltip-inner-triangle-size solid transparent;
+  }
+
+  &:before {
+    border: $tooltip-outer-triangle-size solid transparent;
+  }
+}
+
+%triangle-top {
+  @extend %triangle-blueprint;
+
+  &:after {
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, -100%);
+    border-bottom: $tooltip-inner-triangle-size solid $white;
+  }
+
+  &:before {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    border-bottom: $tooltip-outer-triangle-size solid $light-tint;
+  }
+}
+
+%triangle-bottom {
+  @extend %triangle-blueprint;
+
+  &:after {
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%);
+    border-top: $tooltip-inner-triangle-size solid $white;
+  }
+
+  &:before {
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%);
+    border-top: $tooltip-outer-triangle-size solid $light-tint;
+  }
+}
+
+%triangle-left {
+  @extend %triangle-blueprint;
+
+  &:after {
+    top: 50%;
+    left: 0;
+    transform: translate(-100%, -50%);
+    border-right: $tooltip-inner-triangle-size solid $white;
+  }
+
+  &:before {
+    top: 50%;
+    left: 0;
+    transform: translate(-100%, -50%);
+    border-right: $tooltip-outer-triangle-size solid $light-tint;
+  }
+}
+
+%triangle-right {
+  @extend %triangle-blueprint;
+
+  &:after {
+    top: 50%;
+    left: 100%;
+    transform: translate(0, -50%);
+    border-left: $tooltip-inner-triangle-size solid $white;
+  }
+
+  &:before {
+    top: 50%;
+    left: 100%;
+    transform: translate(0, -50%);
+    border-left: $tooltip-outer-triangle-size solid $light-tint;
+  }
+}
+
+%tooltip-on-hover {
+  .tooltip {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &:hover {
+    .tooltip {
+      opacity: 1;
+
+      &.sticky {
+        pointer-events: auto;
+      }
+    }
+  }
+}
+
+%tooltip {
+  @extend %card;
+  @extend %triangle-bottom;
+
+  width: 350px;
+  padding: 1.15rem;
+
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip {
+  @extend %tooltip;
+  transition: all 0.15s ease;
+}
+
+.has-tooltip-top {
+  position: relative;
+  @extend %tooltip-on-hover;
+
+  .tooltip {
+    @extend %triangle-bottom;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, calc(-100% - #{$tooltip-container-gap}));
+  }
+
+  &:hover {
+    .tooltip {
+      transform: translate(-50%, calc(-100% - #{$tooltip-container-gap}));
+    }
+  }
+}
+
+.has-tooltip-bottom {
+  position: relative;
+  @extend %tooltip-on-hover;
+
+  .tooltip {
+    @extend %triangle-top;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, $tooltip-container-gap);
+  }
+
+  &:hover {
+    .tooltip {
+      transform: translate(-50%, $tooltip-container-gap);
+    }
+  }
+}
+
+.has-tooltip-right {
+  position: relative;
+  @extend %tooltip-on-hover;
+
+  .tooltip {
+    @extend %triangle-left;
+    left: 100%;
+    top: 50%;
+    transform: translate($tooltip-container-gap, -50%);
+  }
+
+  &:hover {
+    .tooltip {
+      transform: translate($tooltip-container-gap, -50%);
+    }
+  }
+}
+
+.has-tooltip-left {
+  position: relative;
+  @extend %tooltip-on-hover;
+
+  .tooltip {
+    @extend %triangle-right;
+    left: 0;
+    top: 50%;
+    transform: translate(calc(-100% - #{$tooltip-container-gap}), -50%);
+  }
+
+  &:hover {
+    .tooltip {
+      transform: translate(calc(-100% - #{$tooltip-container-gap}), -50%);
+    }
+  }
+}
