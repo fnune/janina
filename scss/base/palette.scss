@@ -6,9 +6,9 @@
 
 @use 'sass:color';
 
-$saturation-tint: 5% !default;
+$saturation-tint: 3% !default;
 $saturation-shade: -5% !default;
-$lightness-tint: 10% !default;
+$lightness-tint: 7% !default;
 $lightness-shade: -10% !default;
 
 @function tint($color) {

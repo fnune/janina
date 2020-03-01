@@ -99,7 +99,7 @@ th:not([align]) {
 }
 
 .has-text-light {
-  color: #3e4154;
+  color: #393b4a;
 }
 
 .has-text-white {
@@ -167,7 +167,7 @@ th:not([align]) {
 }
 
 .has-background-dark-tint {
-  background-color: #3e4154;
+  background-color: #393b4a;
 }
 
 .has-background-dark-shade {
@@ -179,7 +179,7 @@ th:not([align]) {
 }
 
 .has-background-light-tint {
-  background-color: #f3f3fa;
+  background-color: #e9e9f5;
 }
 
 .has-background-light-shade {
@@ -191,7 +191,7 @@ th:not([align]) {
 }
 
 .has-background-orange-tint {
-  background-color: #ffac6f;
+  background-color: #ffa360;
 }
 
 .has-background-orange-shade {
@@ -203,7 +203,7 @@ th:not([align]) {
 }
 
 .has-background-red-tint {
-  background-color: #ff879b;
+  background-color: #ff788e;
 }
 
 .has-background-red-shade {
@@ -215,7 +215,7 @@ th:not([align]) {
 }
 
 .has-background-blue-tint {
-  background-color: #8670f3;
+  background-color: #7c64f0;
 }
 
 .has-background-blue-shade {
@@ -227,7 +227,7 @@ th:not([align]) {
 }
 
 .has-background-green-tint {
-  background-color: #1fffdd;
+  background-color: #10ffda;
 }
 
 .has-background-green-shade {
@@ -1206,14 +1206,14 @@ th:not([align]) {
 }
 .radio input + *:before, .checkbox input + *:before {
   border: 1px solid transparent;
-  background-color: #f3f3fa;
+  background-color: #e9e9f5;
 }
 .radio input:checked + *:after, .checkbox input:checked + *:after {
   transform: translateY(-50%) scale(1);
 }
 .radio input:checked + *:before, .checkbox input:checked + *:before {
   background-color: #ffffff;
-  border: 1px solid #8670f3;
+  border: 1px solid #7c64f0;
   box-shadow: none;
 }
 .radio input:focus + *:before, .checkbox input:focus + *:before {
@@ -1243,7 +1243,6 @@ th:not([align]) {
   transition: all 0.2s ease;
 }
 .button:hover {
-  transform: translateY(-1px);
   box-shadow: 0 10px 18px rgba(50, 50, 93, 0.08), 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 .button:active {
@@ -1252,7 +1251,7 @@ th:not([align]) {
 .button.primary {
   color: #ffffff;
   text-shadow: 0 1px 3px rgba(64, 32, 221, 0.4);
-  background: linear-gradient(60deg, #4020dd 0%, #6246ea 50%, #8670f3 100%);
+  background: linear-gradient(60deg, #4020dd 0%, #6246ea 50%, #7c64f0 100%);
   background-size: 200% 40px;
   background-position: 0 0;
 }
@@ -1260,28 +1259,28 @@ th:not([align]) {
   background-position: 100% -100%;
 }
 .button.primary:active {
-  color: #f3f3fa;
+  color: #e9e9f5;
   background-position: 0 0;
 }
 .button.secondary {
   color: #6246ea;
-  text-shadow: 0 1px 6px rgba(134, 112, 243, 0.4);
+  text-shadow: 0 1px 6px rgba(124, 100, 240, 0.4);
   background-color: #ffffff;
 }
 .button.secondary:hover {
-  color: #8670f3;
+  color: #7c64f0;
 }
 .button.secondary:active {
   color: #4020dd;
 }
 
-.card {
+.tooltip, .card {
   position: relative;
   padding: 2.15rem;
   border-radius: 4px;
   background-color: white;
-  box-shadow: 0 2px 15px 10px rgba(0, 0, 0, 0.01);
-  border: 1px solid #f3f3fa;
+  box-shadow: 0 2px 15px 10px rgba(0, 0, 0, 0.018);
+  border: 1px solid #e9e9f5;
 }
 
 .checkbox input + *:after {
@@ -1557,7 +1556,7 @@ th:not([align]) {
 }
 
 .has-text-light {
-  color: #3e4154;
+  color: #393b4a;
 }
 
 .has-text-white {
@@ -1625,7 +1624,7 @@ th:not([align]) {
 }
 
 .has-background-dark-tint {
-  background-color: #3e4154;
+  background-color: #393b4a;
 }
 
 .has-background-dark-shade {
@@ -1637,7 +1636,7 @@ th:not([align]) {
 }
 
 .has-background-light-tint {
-  background-color: #f3f3fa;
+  background-color: #e9e9f5;
 }
 
 .has-background-light-shade {
@@ -1649,7 +1648,7 @@ th:not([align]) {
 }
 
 .has-background-orange-tint {
-  background-color: #ffac6f;
+  background-color: #ffa360;
 }
 
 .has-background-orange-shade {
@@ -1661,7 +1660,7 @@ th:not([align]) {
 }
 
 .has-background-red-tint {
-  background-color: #ff879b;
+  background-color: #ff788e;
 }
 
 .has-background-red-shade {
@@ -1673,7 +1672,7 @@ th:not([align]) {
 }
 
 .has-background-blue-tint {
-  background-color: #8670f3;
+  background-color: #7c64f0;
 }
 
 .has-background-blue-shade {
@@ -1685,7 +1684,7 @@ th:not([align]) {
 }
 
 .has-background-green-tint {
-  background-color: #1fffdd;
+  background-color: #10ffda;
 }
 
 .has-background-green-shade {
@@ -1697,7 +1696,7 @@ th:not([align]) {
   flex-direction: column;
 }
 .field span {
-  color: #3e4154;
+  color: #393b4a;
   padding-left: 4px;
   padding-bottom: 4px;
   transition: all 0.2s ease;
@@ -1715,7 +1714,7 @@ th:not([align]) {
 .field.horizontal span {
   flex: 1 1 32%;
   padding: 0 10px 0 0;
-  color: #3e4154;
+  color: #393b4a;
   font-size: 1.15em;
 }
 @media (min-width: 768px) {
@@ -1727,7 +1726,7 @@ th:not([align]) {
   flex: 1 1 68%;
 }
 .field:focus-within span {
-  color: #8670f3;
+  color: #7c64f0;
 }
 
 .input {
@@ -1738,7 +1737,7 @@ th:not([align]) {
   padding: 0 10px;
   border-radius: 4px;
   color: #2b2c34;
-  border: 1px solid #f3f3fa;
+  border: 1px solid #e9e9f5;
   font-size: 1.15em;
 }
 @media (min-width: 768px) {
@@ -1762,7 +1761,7 @@ th:not([align]) {
   color: #b1b1d6;
 }
 .input:focus {
-  border: 1px solid #8670f3;
+  border: 1px solid #7c64f0;
   background-color: #ffffff;
 }
 
@@ -1771,6 +1770,141 @@ th:not([align]) {
 }
 .radio input + *:before {
   border-radius: 50%;
+}
+
+.has-tooltip-left .tooltip:after, .has-tooltip-right .tooltip:after, .has-tooltip-top .tooltip:after, .tooltip:after, .has-tooltip-bottom .tooltip:after, .has-tooltip-left .tooltip:before, .has-tooltip-right .tooltip:before, .has-tooltip-top .tooltip:before, .tooltip:before, .has-tooltip-bottom .tooltip:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+.has-tooltip-left .tooltip:after, .has-tooltip-right .tooltip:after, .has-tooltip-top .tooltip:after, .tooltip:after, .has-tooltip-bottom .tooltip:after {
+  border: 8px solid transparent;
+}
+.has-tooltip-left .tooltip:before, .has-tooltip-right .tooltip:before, .has-tooltip-top .tooltip:before, .tooltip:before, .has-tooltip-bottom .tooltip:before {
+  border: 9px solid transparent;
+}
+
+.has-tooltip-bottom .tooltip:after {
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -100%);
+  border-bottom: 8px solid #ffffff;
+}
+.has-tooltip-bottom .tooltip:before {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  border-bottom: 9px solid #e9e9f5;
+}
+
+.has-tooltip-top .tooltip:after, .tooltip:after {
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%);
+  border-top: 8px solid #ffffff;
+}
+.has-tooltip-top .tooltip:before, .tooltip:before {
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%);
+  border-top: 9px solid #e9e9f5;
+}
+
+.has-tooltip-right .tooltip:after {
+  top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%);
+  border-right: 8px solid #ffffff;
+}
+.has-tooltip-right .tooltip:before {
+  top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%);
+  border-right: 9px solid #e9e9f5;
+}
+
+.has-tooltip-left .tooltip:after {
+  top: 50%;
+  left: 100%;
+  transform: translate(0, -50%);
+  border-left: 8px solid #ffffff;
+}
+.has-tooltip-left .tooltip:before {
+  top: 50%;
+  left: 100%;
+  transform: translate(0, -50%);
+  border-left: 9px solid #e9e9f5;
+}
+
+.has-tooltip-left .tooltip, .has-tooltip-right .tooltip, .has-tooltip-bottom .tooltip, .has-tooltip-top .tooltip {
+  opacity: 0;
+  pointer-events: none;
+}
+.has-tooltip-left:hover .tooltip, .has-tooltip-right:hover .tooltip, .has-tooltip-bottom:hover .tooltip, .has-tooltip-top:hover .tooltip {
+  opacity: 1;
+}
+.has-tooltip-left:hover .tooltip.sticky, .has-tooltip-right:hover .tooltip.sticky, .has-tooltip-bottom:hover .tooltip.sticky, .has-tooltip-top:hover .tooltip.sticky {
+  pointer-events: auto;
+}
+
+.tooltip {
+  width: 350px;
+  padding: 1.15rem;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip {
+  transition: all 0.15s ease;
+}
+
+.has-tooltip-top {
+  position: relative;
+}
+.has-tooltip-top .tooltip {
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, calc(-100% - 1rem));
+}
+.has-tooltip-top:hover .tooltip {
+  transform: translate(-50%, calc(-100% - 1rem));
+}
+
+.has-tooltip-bottom {
+  position: relative;
+}
+.has-tooltip-bottom .tooltip {
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, 1rem);
+}
+.has-tooltip-bottom:hover .tooltip {
+  transform: translate(-50%, 1rem);
+}
+
+.has-tooltip-right {
+  position: relative;
+}
+.has-tooltip-right .tooltip {
+  left: 100%;
+  top: 50%;
+  transform: translate(1rem, -50%);
+}
+.has-tooltip-right:hover .tooltip {
+  transform: translate(1rem, -50%);
+}
+
+.has-tooltip-left {
+  position: relative;
+}
+.has-tooltip-left .tooltip {
+  left: 0;
+  top: 50%;
+  transform: translate(calc(-100% - 1rem), -50%);
+}
+.has-tooltip-left:hover .tooltip {
+  transform: translate(calc(-100% - 1rem), -50%);
 }
 
 /*# sourceMappingURL=janina.css.map */
