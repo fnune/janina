@@ -1745,18 +1745,6 @@ th:not([align]) {
     font-size: 1em;
   }
 }
-.input::-webkit-input-placeholder {
-  color: #b1b1d6;
-}
-.input::-moz-placeholder {
-  color: #b1b1d6;
-}
-.input:-ms-input-placeholder {
-  color: #b1b1d6;
-}
-.input::-ms-input-placeholder {
-  color: #b1b1d6;
-}
 .input::placeholder {
   color: #b1b1d6;
 }
