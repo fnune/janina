@@ -1,4 +1,4 @@
-import { configure } from '@storybook/html'
+import { configure } from '@storybook/react'
 
 import '../scss/janina.scss'
 import '../stories/theme.scss'

@@ -4,7 +4,7 @@ module.exports = ({ config }) => {
    * development experience while building stories, and also janina itself.
    */
   config.module.rules.push({
-    test: /\.ts$/,
+    test: /\.tsx$/,
     use: ['ts-loader'],
   })
 
@@ -18,7 +18,7 @@ module.exports = ({ config }) => {
     use: ['style-loader', 'css-loader', 'clean-css-loader', 'postcss-loader', 'sass-loader'],
   })
 
-  config.resolve.extensions.push('.ts', '.scss')
+  config.resolve.extensions.push('.tsx', '.scss')
 
   return config
 }

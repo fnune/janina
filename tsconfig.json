@@ -4,6 +4,7 @@
     "allowSyntheticDefaultImports": true,
     "baseUrl": "stories",
     "esModuleInterop": true,
+    "jsx": "react",
     "lib": ["es5", "es6", "es7", "es2017", "dom"],
     "module": "commonjs",
     "rootDirs": ["stories"],
