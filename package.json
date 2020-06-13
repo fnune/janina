@@ -1,6 +1,6 @@
 {
   "name": "janina",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A work-in-progress CSS-only library",
   "main": "scss/janina.scss",
   "scripts": {
