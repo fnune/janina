@@ -1,6 +1,6 @@
 # janina
 
-A component library and design system with a vision of cross-platform compatibility.
+A work-in-progress CSS-only library.
 
 Typography and spacing set-up based on [ether](https://github.com/wearethescenery/ether).
 
