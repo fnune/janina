@@ -1,9 +1,13 @@
+@import '../base/variables/all';
+
 %card {
+  $box-shadow: 0 $space-tiny $space-body $space-medium rgba(0, 0, 0, 0.018);
+
   position: relative;
-  padding: 2.15rem;
-  border-radius: 4px;
-  background-color: white;
-  box-shadow: 0 2px 15px 10px rgba(0, 0, 0, 0.018);
+  padding: $space-larger;
+  border-radius: $border-radius-medium;
+  background-color: $white;
+  box-shadow: $box-shadow;
   border: 1px solid $light-tint;
 }
 

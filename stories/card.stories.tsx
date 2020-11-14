@@ -8,7 +8,7 @@ export default {
 
 export const Default = () => (
   <div className="story__card-container">
-    <div className="story__card card content">
+    <div className="story__card card">
       <h3>This is a card</h3>
       <p>
         You can put anything you want in it. It's just a container with a shadow and some padding.
@@ -20,24 +20,24 @@ export const Default = () => (
       </ul>
       <div className="story__card-buttons">
         <button className="button primary">Alright, tell me more</button>
-        <button className="button secondary">Nevermind</button>
+        <button className="button">Nevermind</button>
       </div>
     </div>
-    <div className="story__card card content">
+    <div className="story__card card">
       <label className="field horizontal" htmlFor="first-name">
-        <span>First name</span>
+        <span className="label">First name</span>
         <input id="first-name" placeholder="Jane" className="input" />
       </label>
       <label className="field horizontal" htmlFor="last-name">
-        <span>Last name</span>
+        <span className="label">Last name</span>
         <input id="last-name" placeholder="Doe" className="input" />
       </label>
       <label className="field horizontal" htmlFor="email">
-        <span>Email</span>
+        <span className="label">Email</span>
         <input id="email" placeholder="jane.doe@example.com" className="input" />
       </label>
       <label className="field horizontal" htmlFor="website">
-        <span>Company website</span>
+        <span className="label">Company website</span>
         <input id="website" placeholder="example.com" className="input" />
       </label>
       <div className="story__card-buttons">

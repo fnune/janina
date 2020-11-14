@@ -10,7 +10,7 @@ $checkable-size: 1.3em;
   position: absolute;
   top: 50%;
   transform: $checkable-common-pseudo-translate;
-  transition: all 0.2s ease;
+  transition: all $transition-speed ease;
   width: $checkable-size;
 }
 
@@ -19,7 +19,7 @@ $checkable-size: 1.3em;
   display: block;
   position: relative;
   cursor: pointer;
-  padding-left: 2em;
+  padding-left: $checkable-size + $space-medium;
 
   > input {
     position: absolute;
@@ -29,24 +29,26 @@ $checkable-size: 1.3em;
   input + * {
     color: $dark;
 
-    &:after {
+    &::after {
       @extend %checkable-common-pseudo;
+
       transform: $checkable-common-pseudo-translate scale(0);
     }
 
-    &:before {
+    &::before {
       @extend %checkable-common-pseudo;
+
       border: 1px solid transparent;
       background-color: $light-tint;
     }
   }
 
   input:checked + * {
-    &:after {
+    &::after {
       transform: $checkable-common-pseudo-translate scale(1);
     }
 
-    &:before {
+    &::before {
       background-color: $white;
       border: 1px solid $primary-tint;
       box-shadow: none;
@@ -54,7 +56,7 @@ $checkable-size: 1.3em;
   }
 
   input:focus + * {
-    &:before {
+    &::before {
       box-shadow: 0 0 1px 1px $light;
     }
   }

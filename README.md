@@ -2,8 +2,6 @@
 
 A work-in-progress CSS-only library.
 
-Typography and spacing set-up based on [ether](https://github.com/wearethescenery/ether).
-
 The typeface of choice is [Inter](https://github.com/rsms/inter).
 
 ## Development

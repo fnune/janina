@@ -1,22 +1,22 @@
 $tooltip-inner-triangle-size: 8px;
 $tooltip-outer-triangle-size: 9px;
-
 $tooltip-container-gap: 1rem;
+$tooltip-size: 24em;
 
 %triangle-blueprint {
-  &:after,
-  &:before {
+  &::after,
+  &::before {
     content: '';
     position: absolute;
     width: 0;
     height: 0;
   }
 
-  &:after {
+  &::after {
     border: $tooltip-inner-triangle-size solid transparent;
   }
 
-  &:before {
+  &::before {
     border: $tooltip-outer-triangle-size solid transparent;
   }
 }
@@ -24,14 +24,14 @@ $tooltip-container-gap: 1rem;
 %triangle-top {
   @extend %triangle-blueprint;
 
-  &:after {
+  &::after {
     left: 50%;
     top: 0;
     transform: translate(-50%, -100%);
     border-bottom: $tooltip-inner-triangle-size solid $white;
   }
 
-  &:before {
+  &::before {
     top: 0;
     left: 50%;
     transform: translate(-50%, -100%);
@@ -42,14 +42,14 @@ $tooltip-container-gap: 1rem;
 %triangle-bottom {
   @extend %triangle-blueprint;
 
-  &:after {
+  &::after {
     top: 100%;
     left: 50%;
     transform: translate(-50%);
     border-top: $tooltip-inner-triangle-size solid $white;
   }
 
-  &:before {
+  &::before {
     top: 100%;
     left: 50%;
     transform: translate(-50%);
@@ -60,14 +60,14 @@ $tooltip-container-gap: 1rem;
 %triangle-left {
   @extend %triangle-blueprint;
 
-  &:after {
+  &::after {
     top: 50%;
     left: 0;
     transform: translate(-100%, -50%);
     border-right: $tooltip-inner-triangle-size solid $white;
   }
 
-  &:before {
+  &::before {
     top: 50%;
     left: 0;
     transform: translate(-100%, -50%);
@@ -78,14 +78,14 @@ $tooltip-container-gap: 1rem;
 %triangle-right {
   @extend %triangle-blueprint;
 
-  &:after {
+  &::after {
     top: 50%;
     left: 100%;
     transform: translate(0, -50%);
     border-left: $tooltip-inner-triangle-size solid $white;
   }
 
-  &:before {
+  &::before {
     top: 50%;
     left: 100%;
     transform: translate(0, -50%);
@@ -114,17 +114,19 @@ $tooltip-container-gap: 1rem;
   @extend %card;
   @extend %triangle-bottom;
 
-  width: 350px;
-  padding: 1.15rem;
-
+  width: $tooltip-size;
+  padding: $space-body;
   position: absolute;
   z-index: 1;
 }
 
 .tooltip {
   @extend %tooltip;
+
   transition: all 0.15s ease;
 }
+
+/* stylelint-disable no-descending-specificity */
 
 .has-tooltip-top {
   position: relative;
@@ -132,6 +134,7 @@ $tooltip-container-gap: 1rem;
 
   .tooltip {
     @extend %triangle-bottom;
+
     left: 50%;
     top: 0;
     transform: translate(-50%, calc(-100% - #{$tooltip-container-gap}));
@@ -150,6 +153,7 @@ $tooltip-container-gap: 1rem;
 
   .tooltip {
     @extend %triangle-top;
+
     left: 50%;
     top: 100%;
     transform: translate(-50%, $tooltip-container-gap);
@@ -168,6 +172,7 @@ $tooltip-container-gap: 1rem;
 
   .tooltip {
     @extend %triangle-left;
+
     left: 100%;
     top: 50%;
     transform: translate($tooltip-container-gap, -50%);
@@ -186,6 +191,7 @@ $tooltip-container-gap: 1rem;
 
   .tooltip {
     @extend %triangle-right;
+
     left: 0;
     top: 50%;
     transform: translate(calc(-100% - #{$tooltip-container-gap}), -50%);
@@ -197,3 +203,5 @@ $tooltip-container-gap: 1rem;
     }
   }
 }
+
+/* stylelint-enable no-descending-specificity */

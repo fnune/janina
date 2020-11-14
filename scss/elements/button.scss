@@ -1,46 +1,16 @@
 @use '../base/variables/all';
 
 .button {
-  display: inline-block;
+  // Currently can't control font size or paddings.
+  $size: $control-size-medium;
 
-  white-space: nowrap;
-  cursor: pointer;
-  outline: none;
-
-  height: 40px;
-  line-height: 40px;
-  font-size: 15px;
-  padding: 0 14px;
-  border: none;
-
-  border-radius: 4px;
-  letter-spacing: 0.04em;
-  font-weight: bold;
-
-  box-shadow: 0 7px 14px rgba(50, 50, 93, 0.05), 0 3px 6px rgba(0, 0, 0, 0.03);
-
-  transform: translateY(0);
-  transition: all 0.2s ease;
-
-  &:hover {
-    box-shadow: 0 10px 18px rgba(50, 50, 93, 0.08), 0 4px 6px rgba(0, 0, 0, 0.05);
-  }
-
-  &:active {
-    transform: translateY(1px);
-  }
-
-  &.primary {
+  @mixin button-dark-background($color, $color-tint, $color-shade) {
     color: $white;
-    text-shadow: 0 1px 3px rgba($primary-shade, 0.4);
+    font-weight: $button-dark-background-font-weight;
 
-    background: linear-gradient(60deg, $primary-shade 0%, $primary 50%, $primary-tint 100%);
-    background-size: 200% 40px;
-    background-position: 0 0;
-
-    &:hover {
-      background-position: 100% -100%;
-    }
+    @include text-shadow-dark-background($color);
+    @include background-dark($color, $color-tint, $color-shade);
+    @include box-shadow($color);
 
     &:active {
       color: $light-tint;
@@ -48,17 +18,74 @@
     }
   }
 
-  &.secondary {
-    color: $primary;
-    text-shadow: 0 1px 6px rgba($primary-tint, 0.4);
+  @mixin button-light-background($color, $color-tint, $color-shade) {
+    color: $color-shade;
     background-color: $white;
+    font-weight: $button-light-background-font-weight;
+
+    @include text-shadow-light-background($color);
 
     &:hover {
-      color: $primary-tint;
+      color: $color-tint;
     }
 
     &:active {
-      color: $primary-shade;
+      color: $color-shade;
     }
+  }
+
+  @mixin box-shadow($color) {
+    box-shadow: 0 $space-small $space-medium rgba($color, 0.05),
+      0 $space-tiny $space-small rgba(0, 0, 0, 0.03);
+
+    &:hover {
+      box-shadow: 0 $space-medium $space-body rgba($color, 0.08),
+        0 $space-tiny $space-small rgba(0, 0, 0, 0.05);
+    }
+  }
+
+  @mixin background-dark($color, $color-tint, $color-shade) {
+    background: linear-gradient(60deg, $color-shade 0%, $color 50%, $color-tint 100%);
+    background-size: 200% $size;
+    background-position: 0 0;
+
+    &:hover {
+      background-position: 100% -100%;
+    }
+  }
+
+  @mixin text-shadow-dark-background($color) {
+    text-shadow: 0 1px $space-tiny rgba($color, 0.4);
+  }
+
+  @mixin text-shadow-light-background($color) {
+    text-shadow: 0 1px $space-small rgba($color, 0.3);
+  }
+
+  display: inline-block;
+  white-space: nowrap;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  height: $size;
+  font-size: $font-size-base;
+  letter-spacing: 0.03em;
+  line-height: $size;
+  padding: 0 $space-medium;
+  border-radius: $border-radius-medium;
+  transform: translateY(0);
+  transition: all $transition-speed ease;
+
+  &:active {
+    transform: translateY(1px);
+  }
+
+  @include box-shadow($light);
+
+  // The default button
+  @include button-light-background($dark, $dark-tint, $dark-shade);
+
+  &.primary {
+    @include button-dark-background($primary, $primary-tint, $primary-shade);
   }
 }

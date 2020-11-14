@@ -44,6 +44,7 @@ button,
 input,
 select,
 textarea {
+  font-family: inherit;
   margin: 0;
 }
 
@@ -86,7 +87,15 @@ th:not([align]) {
  * each (tint and shade) that provide all the variations necessary
  * for the colors file.
  */
-/** Color theme. */
+/** Typography */
+/** Spacing */
+/** Colors */
+/** Typography */
+/** Spacing */
+/** Borders */
+/** Buttons */
+/** Controls */
+/** Transitions */
 /**
  * Color palette.
  *
@@ -94,8 +103,16 @@ th:not([align]) {
  * each (tint and shade) that provide all the variations necessary
  * for the colors file.
  */
-/** Color theme. */
-.radio input + *:before, .checkbox input + *:before, .radio input + *:after, .checkbox input + *:after {
+/** Typography */
+/** Spacing */
+/** Colors */
+/** Typography */
+/** Spacing */
+/** Borders */
+/** Buttons */
+/** Controls */
+/** Transitions */
+.radio input + *::before, .checkbox input + *::before, .radio input + *::after, .checkbox input + *::after {
   content: "";
   height: 1.3em;
   left: 0;
@@ -111,7 +128,7 @@ th:not([align]) {
   display: block;
   position: relative;
   cursor: pointer;
-  padding-left: 2em;
+  padding-left: 2.05em;
 }
 .radio > input, .checkbox > input {
   position: absolute;
@@ -120,22 +137,22 @@ th:not([align]) {
 .radio input + *, .checkbox input + * {
   color: #2b2c34;
 }
-.radio input + *:after, .checkbox input + *:after {
+.radio input + *::after, .checkbox input + *::after {
   transform: translateY(-50%) scale(0);
 }
-.radio input + *:before, .checkbox input + *:before {
+.radio input + *::before, .checkbox input + *::before {
   border: 1px solid transparent;
   background-color: #e9e9f5;
 }
-.radio input:checked + *:after, .checkbox input:checked + *:after {
+.radio input:checked + *::after, .checkbox input:checked + *::after {
   transform: translateY(-50%) scale(1);
 }
-.radio input:checked + *:before, .checkbox input:checked + *:before {
-  background-color: #ffffff;
+.radio input:checked + *::before, .checkbox input:checked + *::before {
+  background-color: #fff;
   border: 1px solid #7c64f0;
   box-shadow: none;
 }
-.radio input:focus + *:before, .checkbox input:focus + *:before {
+.radio input:focus + *::before, .checkbox input:focus + *::before {
   box-shadow: 0 0 1px 1px #d1d1e9;
 }
 
@@ -146,70 +163,97 @@ th:not([align]) {
  * each (tint and shade) that provide all the variations necessary
  * for the colors file.
  */
-/** Color theme. */
+/** Typography */
+/** Spacing */
+/** Colors */
+/** Typography */
+/** Spacing */
+/** Borders */
+/** Buttons */
+/** Controls */
+/** Transitions */
 .button {
   display: inline-block;
   white-space: nowrap;
   cursor: pointer;
   outline: none;
-  height: 40px;
-  line-height: 40px;
-  font-size: 15px;
-  padding: 0 14px;
   border: none;
-  border-radius: 4px;
-  letter-spacing: 0.04em;
-  font-weight: bold;
-  box-shadow: 0 7px 14px rgba(50, 50, 93, 0.05), 0 3px 6px rgba(0, 0, 0, 0.03);
+  height: 2.5em;
+  font-size: 1em;
+  letter-spacing: 0.03em;
+  line-height: 2.5em;
+  padding: 0 0.75em;
+  border-radius: 0.25em;
   transform: translateY(0);
   transition: all 0.2s ease;
-}
-.button:hover {
-  box-shadow: 0 10px 18px rgba(50, 50, 93, 0.08), 0 4px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0.5em 0.75em rgba(209, 209, 233, 0.05), 0 0.3em 0.5em rgba(0, 0, 0, 0.03);
+  color: #151517;
+  background-color: #fff;
+  font-weight: 400;
+  text-shadow: 0 1px 0.5em rgba(43, 44, 52, 0.3);
 }
 .button:active {
   transform: translateY(1px);
 }
+.button:hover {
+  box-shadow: 0 0.75em 1em rgba(209, 209, 233, 0.08), 0 0.3em 0.5em rgba(0, 0, 0, 0.05);
+}
+.button:hover {
+  color: #393b4a;
+}
+.button:active {
+  color: #151517;
+}
 .button.primary {
-  color: #ffffff;
-  text-shadow: 0 1px 3px rgba(64, 32, 221, 0.4);
+  color: #fff;
+  font-weight: 500;
+  text-shadow: 0 1px 0.3em rgba(98, 70, 234, 0.4);
   background: linear-gradient(60deg, #4020dd 0%, #6246ea 50%, #7c64f0 100%);
-  background-size: 200% 40px;
+  background-size: 200% 2.5em;
   background-position: 0 0;
+  box-shadow: 0 0.5em 0.75em rgba(98, 70, 234, 0.05), 0 0.3em 0.5em rgba(0, 0, 0, 0.03);
 }
 .button.primary:hover {
   background-position: 100% -100%;
+}
+.button.primary:hover {
+  box-shadow: 0 0.75em 1em rgba(98, 70, 234, 0.08), 0 0.3em 0.5em rgba(0, 0, 0, 0.05);
 }
 .button.primary:active {
   color: #e9e9f5;
   background-position: 0 0;
 }
-.button.secondary {
-  color: #6246ea;
-  text-shadow: 0 1px 6px rgba(124, 100, 240, 0.4);
-  background-color: #ffffff;
-}
-.button.secondary:hover {
-  color: #7c64f0;
-}
-.button.secondary:active {
-  color: #4020dd;
-}
 
+/**
+ * Color palette.
+ *
+ * The palette file maps variables to hex values with two stops
+ * each (tint and shade) that provide all the variations necessary
+ * for the colors file.
+ */
+/** Typography */
+/** Spacing */
+/** Colors */
+/** Typography */
+/** Spacing */
+/** Borders */
+/** Buttons */
+/** Controls */
+/** Transitions */
 .tooltip, .card {
   position: relative;
-  padding: 2.15rem;
-  border-radius: 4px;
-  background-color: white;
-  box-shadow: 0 2px 15px 10px rgba(0, 0, 0, 0.018);
+  padding: 2.5em;
+  border-radius: 0.25em;
+  background-color: #fff;
+  box-shadow: 0 0.3em 1em 0.75em rgba(0, 0, 0, 0.018);
   border: 1px solid #e9e9f5;
 }
 
-.checkbox input + *:after {
+.checkbox input + *::after {
   background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSI2NHB4IiBoZWlnaHQ9IjY0cHgiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgNjQgNjQiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxnPjxwb2x5Z29uIHBvaW50cz0iMTMuNzA3LDMyLjI5MyAxMi4yOTMsMzMuODU0IDI0LjI5Myw0NiAyNS43MDcsNDYgNDkuNzA3LDIxLjg1NCA0OC4yOTMsMjAuMzY2IDI1LDQzLjYyMyAiLz48L2c+PC9zdmc+) no-repeat center/contain;
 }
-.checkbox input + *:before {
-  border-radius: 4px;
+.checkbox input + *::before {
+  border-radius: 0.25em;
 }
 
 .icon {
@@ -231,40 +275,52 @@ th:not([align]) {
  * each (tint and shade) that provide all the variations necessary
  * for the colors file.
  */
-/** Color theme. */
+/** Typography */
+/** Spacing */
+/** Colors */
+/** Typography */
+/** Spacing */
+/** Borders */
+/** Buttons */
+/** Controls */
+/** Transitions */
 .field {
   display: flex;
   flex-direction: column;
+  font-size: 1em;
 }
-.field span {
+.field .label {
+  font-size: 0.8em;
   color: #393b4a;
-  padding-left: 4px;
-  padding-bottom: 4px;
+  padding-left: 0.3em;
+  padding-bottom: 0.3em;
   transition: all 0.2s ease;
 }
 .field.horizontal {
   align-items: baseline;
   flex-direction: row;
 }
-.field.horizontal span {
+.field.horizontal .label {
+  font-size: 1em;
   flex: 1 1 32%;
-  padding: 0 10px 0 0;
+  padding: 0 0.75em 0 0;
   color: #393b4a;
 }
 .field.horizontal input {
   flex: 1 1 68%;
 }
-.field:focus-within span {
+.field:focus-within .label {
   color: #7c64f0;
 }
 
 .input {
-  height: 40px;
-  line-height: 40px;
+  height: 2.5em;
+  line-height: 2.5em;
+  font-size: 1em;
   outline: none;
   transition: all 0.2s ease;
-  padding: 0 10px;
-  border-radius: 4px;
+  padding: 0 0.75em;
+  border-radius: 0.25em;
   color: #2b2c34;
   border: 1px solid #e9e9f5;
 }
@@ -279,75 +335,75 @@ th:not([align]) {
 }
 .input:focus {
   border: 1px solid #7c64f0;
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
-.radio input + *:after {
+.radio input + *::after {
   background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pgo8c3ZnIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPGNpcmNsZSBjeD0iMTAwIiBjeT0iMTAwIiByPSIyOCIgZmlsbD0iYmxhY2siIC8+Cjwvc3ZnPgo=) no-repeat center/contain;
 }
-.radio input + *:before {
+.radio input + *::before {
   border-radius: 50%;
 }
 
-.has-tooltip-left .tooltip:after, .has-tooltip-right .tooltip:after, .has-tooltip-top .tooltip:after, .tooltip:after, .has-tooltip-bottom .tooltip:after, .has-tooltip-left .tooltip:before, .has-tooltip-right .tooltip:before, .has-tooltip-top .tooltip:before, .tooltip:before, .has-tooltip-bottom .tooltip:before {
+.has-tooltip-left .tooltip::after, .has-tooltip-right .tooltip::after, .has-tooltip-top .tooltip::after, .tooltip::after, .has-tooltip-bottom .tooltip::after, .has-tooltip-left .tooltip::before, .has-tooltip-right .tooltip::before, .has-tooltip-top .tooltip::before, .tooltip::before, .has-tooltip-bottom .tooltip::before {
   content: "";
   position: absolute;
   width: 0;
   height: 0;
 }
-.has-tooltip-left .tooltip:after, .has-tooltip-right .tooltip:after, .has-tooltip-top .tooltip:after, .tooltip:after, .has-tooltip-bottom .tooltip:after {
+.has-tooltip-left .tooltip::after, .has-tooltip-right .tooltip::after, .has-tooltip-top .tooltip::after, .tooltip::after, .has-tooltip-bottom .tooltip::after {
   border: 8px solid transparent;
 }
-.has-tooltip-left .tooltip:before, .has-tooltip-right .tooltip:before, .has-tooltip-top .tooltip:before, .tooltip:before, .has-tooltip-bottom .tooltip:before {
+.has-tooltip-left .tooltip::before, .has-tooltip-right .tooltip::before, .has-tooltip-top .tooltip::before, .tooltip::before, .has-tooltip-bottom .tooltip::before {
   border: 9px solid transparent;
 }
 
-.has-tooltip-bottom .tooltip:after {
+.has-tooltip-bottom .tooltip::after {
   left: 50%;
   top: 0;
   transform: translate(-50%, -100%);
-  border-bottom: 8px solid #ffffff;
+  border-bottom: 8px solid #fff;
 }
-.has-tooltip-bottom .tooltip:before {
+.has-tooltip-bottom .tooltip::before {
   top: 0;
   left: 50%;
   transform: translate(-50%, -100%);
   border-bottom: 9px solid #e9e9f5;
 }
 
-.has-tooltip-top .tooltip:after, .tooltip:after {
+.has-tooltip-top .tooltip::after, .tooltip::after {
   top: 100%;
   left: 50%;
   transform: translate(-50%);
-  border-top: 8px solid #ffffff;
+  border-top: 8px solid #fff;
 }
-.has-tooltip-top .tooltip:before, .tooltip:before {
+.has-tooltip-top .tooltip::before, .tooltip::before {
   top: 100%;
   left: 50%;
   transform: translate(-50%);
   border-top: 9px solid #e9e9f5;
 }
 
-.has-tooltip-right .tooltip:after {
+.has-tooltip-right .tooltip::after {
   top: 50%;
   left: 0;
   transform: translate(-100%, -50%);
-  border-right: 8px solid #ffffff;
+  border-right: 8px solid #fff;
 }
-.has-tooltip-right .tooltip:before {
+.has-tooltip-right .tooltip::before {
   top: 50%;
   left: 0;
   transform: translate(-100%, -50%);
   border-right: 9px solid #e9e9f5;
 }
 
-.has-tooltip-left .tooltip:after {
+.has-tooltip-left .tooltip::after {
   top: 50%;
   left: 100%;
   transform: translate(0, -50%);
-  border-left: 8px solid #ffffff;
+  border-left: 8px solid #fff;
 }
-.has-tooltip-left .tooltip:before {
+.has-tooltip-left .tooltip::before {
   top: 50%;
   left: 100%;
   transform: translate(0, -50%);
@@ -366,8 +422,8 @@ th:not([align]) {
 }
 
 .tooltip {
-  width: 350px;
-  padding: 1.15rem;
+  width: 24em;
+  padding: 1em;
   position: absolute;
   z-index: 1;
 }
@@ -376,6 +432,7 @@ th:not([align]) {
   transition: all 0.15s ease;
 }
 
+/* stylelint-disable no-descending-specificity */
 .has-tooltip-top {
   position: relative;
 }
@@ -424,6 +481,7 @@ th:not([align]) {
   transform: translate(calc(-100% - 1rem), -50%);
 }
 
+/* stylelint-enable no-descending-specificity */
 /**
  * Color palette.
  *
@@ -431,7 +489,15 @@ th:not([align]) {
  * each (tint and shade) that provide all the variations necessary
  * for the colors file.
  */
-/** Color theme. */
+/** Typography */
+/** Spacing */
+/** Colors */
+/** Typography */
+/** Spacing */
+/** Borders */
+/** Buttons */
+/** Controls */
+/** Transitions */
 .has-text-light {
   color: #d1d1e9;
 }
@@ -440,7 +506,7 @@ th:not([align]) {
   color: #d1d1e9;
 }
 
-.has-background-name {
+.has-background-light {
   background-color: #d1d1e9;
 }
 
@@ -452,32 +518,32 @@ th:not([align]) {
   color: #2b2c34;
 }
 
-.has-background-name {
+.has-background-dark {
   background-color: #2b2c34;
 }
 
 .has-text-white {
-  color: #ffffff;
+  color: #fff;
 }
 
 .has-icon-white {
-  color: #ffffff;
+  color: #fff;
 }
 
-.has-background-name {
-  background-color: #ffffff;
+.has-background-white {
+  background-color: #fff;
 }
 
 .has-text-black {
-  color: #000000;
+  color: #000;
 }
 
 .has-icon-black {
-  color: #000000;
+  color: #000;
 }
 
-.has-background-name {
-  background-color: #000000;
+.has-background-black {
+  background-color: #000;
 }
 
 .has-text-primary {
@@ -488,7 +554,7 @@ th:not([align]) {
   color: #6246ea;
 }
 
-.has-background-name {
+.has-background-primary {
   background-color: #6246ea;
 }
 
@@ -500,7 +566,7 @@ th:not([align]) {
   color: #7c64f0;
 }
 
-.has-background-name {
+.has-background-primary-tint {
   background-color: #7c64f0;
 }
 
@@ -512,7 +578,7 @@ th:not([align]) {
   color: #4020dd;
 }
 
-.has-background-name {
+.has-background-primary-shade {
   background-color: #4020dd;
 }
 
@@ -524,7 +590,7 @@ th:not([align]) {
   color: #3298dc;
 }
 
-.has-background-name {
+.has-background-info {
   background-color: #3298dc;
 }
 
@@ -536,7 +602,7 @@ th:not([align]) {
   color: #4da8e4;
 }
 
-.has-background-name {
+.has-background-info-tint {
   background-color: #4da8e4;
 }
 
@@ -548,7 +614,7 @@ th:not([align]) {
   color: #257cb6;
 }
 
-.has-background-name {
+.has-background-info-shade {
   background-color: #257cb6;
 }
 
@@ -560,7 +626,7 @@ th:not([align]) {
   color: #00ebc7;
 }
 
-.has-background-name {
+.has-background-success {
   background-color: #00ebc7;
 }
 
@@ -572,7 +638,7 @@ th:not([align]) {
   color: #10ffda;
 }
 
-.has-background-name {
+.has-background-success-tint {
   background-color: #10ffda;
 }
 
@@ -584,7 +650,7 @@ th:not([align]) {
   color: #05b399;
 }
 
-.has-background-name {
+.has-background-success-shade {
   background-color: #05b399;
 }
 
@@ -596,7 +662,7 @@ th:not([align]) {
   color: #ff8e3c;
 }
 
-.has-background-name {
+.has-background-warning {
   background-color: #ff8e3c;
 }
 
@@ -608,7 +674,7 @@ th:not([align]) {
   color: #ffa360;
 }
 
-.has-background-name {
+.has-background-warning-tint {
   background-color: #ffa360;
 }
 
@@ -620,7 +686,7 @@ th:not([align]) {
   color: #f9710f;
 }
 
-.has-background-name {
+.has-background-warning-shade {
   background-color: #f9710f;
 }
 
@@ -632,7 +698,7 @@ th:not([align]) {
   color: #ff5470;
 }
 
-.has-background-name {
+.has-background-danger {
   background-color: #ff5470;
 }
 
@@ -644,7 +710,7 @@ th:not([align]) {
   color: #ff788e;
 }
 
-.has-background-name {
+.has-background-danger-tint {
   background-color: #ff788e;
 }
 
@@ -656,7 +722,7 @@ th:not([align]) {
   color: #f92749;
 }
 
-.has-background-name {
+.has-background-danger-shade {
   background-color: #f92749;
 }
 

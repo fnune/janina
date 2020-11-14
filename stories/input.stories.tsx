@@ -9,19 +9,19 @@ export default {
 export const Horizontal = () => (
   <form className="story__inputs">
     <label className="field horizontal" htmlFor="first-name">
-      <span>First name</span>
+      <span className="label">First name</span>
       <input id="first-name" placeholder="Jane" className="input" />
     </label>
     <label className="field horizontal" htmlFor="last-name">
-      <span>Last name</span>
+      <span className="label">Last name</span>
       <input id="last-name" placeholder="Doe" className="input" />
     </label>
     <label className="field horizontal" htmlFor="email">
-      <span>Email</span>
+      <span className="label">Email</span>
       <input id="email" placeholder="jane.doe@example.com" className="input" />
     </label>
     <label className="field horizontal" htmlFor="website">
-      <span>Company website</span>
+      <span className="label">Company website</span>
       <input id="website" placeholder="example.com" className="input" />
     </label>
   </form>
@@ -30,19 +30,19 @@ export const Horizontal = () => (
 export const Vertical = () => (
   <form className="story__inputs">
     <label className="field" htmlFor="first-name">
-      <span>First name</span>
+      <span className="label">First name</span>
       <input id="first-name" placeholder="Jane" className="input" />
     </label>
     <label className="field" htmlFor="last-name">
-      <span>Last name</span>
+      <span className="label">Last name</span>
       <input id="last-name" placeholder="Doe" className="input" />
     </label>
     <label className="field" htmlFor="email">
-      <span>Email</span>
+      <span className="label">Email</span>
       <input id="email" placeholder="jane.doe@example.com" className="input" />
     </label>
     <label className="field" htmlFor="website">
-      <span>Company website</span>
+      <span className="label">Company website</span>
       <input id="website" placeholder="example.com" className="input" />
     </label>
   </form>

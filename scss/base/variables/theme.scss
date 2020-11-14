@@ -1,6 +1,6 @@
 @import './primitive';
 
-/** Color theme. */
+/** Colors */
 
 $light: $light !default;
 $dark: $dark !default;
@@ -27,3 +27,36 @@ $warning-shade: $orange-shade !default;
 $danger: $red !default;
 $danger-tint: $red-tint !default;
 $danger-shade: $red-shade !default;
+
+/** Typography */
+
+$font-size-base: $size-6;
+$font-size-small: $size-7;
+
+/** Spacing */
+
+$space-zero: $space-0;
+$space-tiny: $space-1;
+$space-small: $space-2;
+$space-medium: $space-3;
+$space-body: $space-4;
+$space-large: $space-5;
+$space-larger: $space-6;
+$space-largest: $space-7;
+
+/** Borders */
+
+$border-radius-medium: 0.25em;
+
+/** Buttons */
+
+$button-dark-background-font-weight: $weight-semibold;
+$button-light-background-font-weight: $weight-medium;
+
+/** Controls */
+
+$control-size-medium: 2.5em;
+
+/** Transitions */
+
+$transition-speed: 0.2s;

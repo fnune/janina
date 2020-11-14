@@ -6,7 +6,7 @@ export default {
   title: 'Radio',
 }
 
-export const radio = () =>
+export const radio = () => (
   <div className="story__radios">
     <label className="radio">
       <input name="favorite-thing" value="raindrops" type="radio" />
@@ -29,4 +29,4 @@ export const radio = () =>
       <span>Brown paper packages tied up with strings</span>
     </label>
   </div>
-
+)

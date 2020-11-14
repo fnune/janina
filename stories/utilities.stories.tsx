@@ -36,7 +36,7 @@ const colors = [
 ]
 
 export const ColorUtilities = () => (
-  <div className="story__utilities card content">
+  <div className="story__utilities card">
     {colors.map((color) => (
       <Utility
         name={`has-text-${color}`}
