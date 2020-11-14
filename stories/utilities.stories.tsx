@@ -13,24 +13,26 @@ const Utility = ({ name, example }: { name: string; example: React.ReactNode }) 
   </div>
 )
 
-const colors = ['dark', 'light', 'white', 'accent', 'link', 'success', 'info', 'warning', 'danger']
-const backgroundColors = [
-  'white',
-  'dark',
-  'dark-tint',
-  'dark-shade',
+const colors = [
   'light',
-  'light-tint',
-  'light-shade',
-  'red',
-  'red-tint',
-  'red-shade',
-  'blue',
-  'blue-tint',
-  'blue-shade',
-  'green',
-  'green-tint',
-  'green-shade',
+  'dark',
+  'white',
+  'black',
+  'primary-tint',
+  'primary',
+  'primary-shade',
+  'info-tint',
+  'info',
+  'info-shade',
+  'success-tint',
+  'success',
+  'success-shade',
+  'warning-tint',
+  'warning',
+  'warning-shade',
+  'danger-tint',
+  'danger',
+  'danger-shade',
 ]
 
 export const ColorUtilities = () => (
@@ -45,7 +47,7 @@ export const ColorUtilities = () => (
         }
       />
     ))}
-    {backgroundColors.map((color) => (
+    {colors.map((color) => (
       <Utility
         name={`has-background-${color}`}
         example={<div className={`has-background-${color}`} />}

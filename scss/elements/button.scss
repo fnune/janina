@@ -1,8 +1,4 @@
-@use '../base/palette';
-
-$primary: $blue;
-$primary-tint: $blue-tint;
-$primary-shade: $blue-shade;
+@use '../base/variables/all';
 
 .button {
   display: inline-block;

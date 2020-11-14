@@ -1,0 +1,29 @@
+@import './primitive';
+
+/** Color theme. */
+
+$light: $light !default;
+$dark: $dark !default;
+
+$white: $white !default;
+$black: $black !default;
+
+$primary: $blue !default;
+$primary-tint: $blue-tint !default;
+$primary-shade: $blue-shade !default;
+
+$info: $cyan !default;
+$info-tint: $cyan-tint !default;
+$info-shade: $cyan-shade !default;
+
+$success: $green !default;
+$success-tint: $green-tint !default;
+$success-shade: $green-shade !default;
+
+$warning: $orange !default;
+$warning-tint: $orange-tint !default;
+$warning-shade: $orange-shade !default;
+
+$danger: $red !default;
+$danger-tint: $red-tint !default;
+$danger-shade: $red-shade !default;

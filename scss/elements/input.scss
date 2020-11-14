@@ -1,21 +1,14 @@
-@use '../base/palette';
-@use '../base/colors';
-@use '../base/text-size';
-
-$primary: $blue;
-$primary-tint: $blue-tint;
-$primary-shade: $blue-shade;
+@use '../base/variables/all';
 
 .field {
   display: flex;
   flex-direction: column;
 
   span {
-    color: $text-light;
+    color: $dark-tint;
     padding-left: 4px;
     padding-bottom: 4px;
     transition: all 0.2s ease;
-    @include size-base-0;
   }
 
   &.horizontal {
@@ -25,8 +18,7 @@ $primary-shade: $blue-shade;
     span {
       flex: 1 1 32%;
       padding: 0 10px 0 0;
-      color: $text-light;
-      @include size-base-1;
+      color: $dark-tint;
     }
 
     input {
@@ -48,9 +40,8 @@ $primary-shade: $blue-shade;
   transition: all 0.2s ease;
   padding: 0 10px;
   border-radius: 4px;
-  color: $text-dark;
+  color: $dark;
   border: 1px solid $light-tint;
-  @include size-base-1;
 
   &::placeholder {
     color: $light-shade;

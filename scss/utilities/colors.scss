@@ -1,0 +1,37 @@
+@import '../base/variables/all';
+
+$colors: (
+  'light': $light,
+  'dark': $dark,
+  'white': $white,
+  'black': $black,
+  'primary': $primary,
+  'primary-tint': $primary-tint,
+  'primary-shade': $primary-shade,
+  'info': $info,
+  'info-tint': $info-tint,
+  'info-shade': $info-shade,
+  'success': $success,
+  'success-tint': $success-tint,
+  'success-shade': $success-shade,
+  'warning': $warning,
+  'warning-tint': $warning-tint,
+  'warning-shade': $warning-shade,
+  'danger': $danger,
+  'danger-tint': $danger-tint,
+  'danger-shade': $danger-shade,
+) !default;
+
+@each $name, $color in $colors {
+  .has-text-#{$name} {
+    color: $color;
+  }
+
+  .has-icon-#{$name} {
+    color: $color;
+  }
+
+  .has-background-#{$name} {
+    background-color: $color;
+  }
+}

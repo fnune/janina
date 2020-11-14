@@ -1,10 +1,12 @@
+@use 'sass:color';
+
 /**
+ * Color palette.
+ *
  * The palette file maps variables to hex values with two stops
  * each (tint and shade) that provide all the variations necessary
  * for the colors file.
  */
-
-@use 'sass:color';
 
 $saturation-tint: 3% !default;
 $saturation-shade: -5% !default;
@@ -19,6 +21,7 @@ $lightness-shade: -10% !default;
   @return color.adjust($color, $lightness: $lightness-shade, $saturation: $saturation-shade);
 }
 
+$black: #000000 !default;
 $white: #ffffff !default;
 
 $dark: #2b2c34 !default;
@@ -44,3 +47,11 @@ $blue-shade: shade($blue) !default;
 $green: #00ebc7 !default;
 $green-tint: tint($green) !default;
 $green-shade: shade($green) !default;
+
+$purple: #b86bff !default;
+$purple-tint: tint($purple) !default;
+$purple-shade: shade($purple) !default;
+
+$cyan: #3298dc !default;
+$cyan-tint: tint($cyan) !default;
+$cyan-shade: shade($cyan) !default;

@@ -1,12 +1,6 @@
-@use '../base/text-size';
-@import '../base/palette';
-
-$primary: $blue;
-$primary-tint: $blue-tint;
-$primary-shade: $blue-shade;
+@import '../base/variables/all';
 
 $checkable-common-pseudo-translate: translateY(-50%);
-
 $checkable-size: 1.3em;
 
 %checkable-common-pseudo {
@@ -21,8 +15,6 @@ $checkable-size: 1.3em;
 }
 
 %checkable {
-  @include size-base-1;
-  @include font-primary-regular;
   line-height: 1.8;
   display: block;
   position: relative;
@@ -35,7 +27,7 @@ $checkable-size: 1.3em;
   }
 
   input + * {
-    color: $text-dark;
+    color: $dark;
 
     &:after {
       @extend %checkable-common-pseudo;
