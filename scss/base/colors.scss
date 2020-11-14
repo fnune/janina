@@ -59,7 +59,7 @@ $icon-colors: (
 
 @each $name, $color in $icon-colors {
   .has-icon-#{$name} {
-    fill: $color;
+    color: $color;
   }
 }
 
