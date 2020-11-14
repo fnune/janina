@@ -1,0 +1,15 @@
+@use '../base/palette';
+@use '../base/colors';
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+
+  svg {
+    font-size: 1.2em;
+    transition: all 0.2s ease;
+    stroke-width: 1.2;
+  }
+}

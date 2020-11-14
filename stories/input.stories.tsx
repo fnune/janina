@@ -6,7 +6,7 @@ export default {
   title: 'Input',
 }
 
-export const horizontal = () => (
+export const Horizontal = () => (
   <form className="story__inputs">
     <label className="field horizontal" htmlFor="first-name">
       <span>First name</span>
@@ -27,7 +27,7 @@ export const horizontal = () => (
   </form>
 )
 
-export const vertical = () => (
+export const Vertical = () => (
   <form className="story__inputs">
     <label className="field" htmlFor="first-name">
       <span>First name</span>
