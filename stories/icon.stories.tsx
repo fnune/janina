@@ -32,7 +32,7 @@ const colors = [
 export const Basic = () => (
   <div className="story__icons card">
     {colors.map((color) => (
-      <div className="story__icons__icon">
+      <div key={color} className="story__icons__icon">
         <i className={`icon has-icon-${color}`}>
           <FiMail />
         </i>
