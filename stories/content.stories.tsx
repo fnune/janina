@@ -62,12 +62,7 @@ export const blogPost = () => (
       of effort involved, but the reward is only as great as you can imagine.
     </p>
     <hr />
-    <h2 id="spend-some-time-together-with-it">
-      Spend some time together with it
-      <a href="#spend-some-time-together-with-it" className="heading-anchor">
-        #
-      </a>
-    </h2>
+    <h2 id="spend-some-time-together-with-it">Spend some time together with it</h2>
     <p>
       Music can be used in many different ways, and one piece of music means different things to
       different people. One day everything’s gone awry and you come home beaten to the ground, but
@@ -99,12 +94,7 @@ export const blogPost = () => (
       your ears and your brain.
     </p>
     <hr />
-    <h2 id="get-rid-of-your-type-of-music">
-      Get rid of “your type of music”
-      <a href="#get-rid-of-your-type-of-music" className="heading-anchor">
-        #
-      </a>
-    </h2>
+    <h2 id="get-rid-of-your-type-of-music">Get rid of “your type of music”</h2>
     <p>
       And with this, I don’t mean “stop listening to what you like”, but “listen to as much as you
       can”.
@@ -131,12 +121,7 @@ export const blogPost = () => (
       things you like.
     </p>
     <hr />
-    <h2 id="discover-and-revisit-the-old">
-      Discover and revisit the old
-      <a href="#discover-and-revisit-the-old" className="heading-anchor">
-        #
-      </a>
-    </h2>
+    <h2 id="discover-and-revisit-the-old">Discover and revisit the old</h2>
     <p>
       The compositions that still reverberate today do so for a reason. When I listen to some of my
       favorites, I can’t help but think their music was there already before they found it, and
@@ -223,12 +208,7 @@ export const compactBlogPost = () => (
       of effort involved, but the reward is only as great as you can imagine.
     </p>
     <hr />
-    <h2 id="spend-some-time-together-with-it">
-      Spend some time together with it
-      <a href="#spend-some-time-together-with-it" className="heading-anchor">
-        #
-      </a>
-    </h2>
+    <h2 id="spend-some-time-together-with-it">Spend some time together with it</h2>
     <p>
       Music can be used in many different ways, and one piece of music means different things to
       different people. One day everything’s gone awry and you come home beaten to the ground, but
@@ -260,12 +240,7 @@ export const compactBlogPost = () => (
       your ears and your brain.
     </p>
     <hr />
-    <h2 id="get-rid-of-your-type-of-music">
-      Get rid of “your type of music”
-      <a href="#get-rid-of-your-type-of-music" className="heading-anchor">
-        #
-      </a>
-    </h2>
+    <h2 id="get-rid-of-your-type-of-music">Get rid of “your type of music”</h2>
     <p>
       And with this, I don’t mean “stop listening to what you like”, but “listen to as much as you
       can”.
@@ -292,12 +267,7 @@ export const compactBlogPost = () => (
       things you like.
     </p>
     <hr />
-    <h2 id="discover-and-revisit-the-old">
-      Discover and revisit the old
-      <a href="#discover-and-revisit-the-old" className="heading-anchor">
-        #
-      </a>
-    </h2>
+    <h2 id="discover-and-revisit-the-old">Discover and revisit the old</h2>
     <p>
       The compositions that still reverberate today do so for a reason. When I listen to some of my
       favorites, I can’t help but think their music was there already before they found it, and
