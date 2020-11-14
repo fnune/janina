@@ -1,14 +1,5 @@
 module.exports = ({ config }) => {
   /**
-   * TypeScript is not related to janina in any way but is included to improve
-   * development experience while building stories, and also janina itself.
-   */
-  config.module.rules.push({
-    test: /\.tsx$/,
-    use: ['ts-loader'],
-  })
-
-  /**
    * The processing of SCSS files with postcss and clean-css is not strictly
    * necessary for development, but it is kept to mimic the production
    * environment and avoid surprises.
@@ -18,7 +9,7 @@ module.exports = ({ config }) => {
     use: ['style-loader', 'css-loader', 'clean-css-loader', 'postcss-loader', 'sass-loader'],
   })
 
-  config.resolve.extensions.push('.tsx', '.scss')
+  config.resolve.extensions.push('.scss')
 
   return config
 }

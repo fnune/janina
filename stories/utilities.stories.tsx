@@ -39,6 +39,7 @@ export const ColorUtilities = () => (
   <div className="story__utilities card">
     {colors.map((color) => (
       <Utility
+        key={color}
         name={`has-text-${color}`}
         example={
           <span className={`has-text-${color} ${color === 'white' ? 'has-background-dark' : ''}`}>
@@ -49,6 +50,7 @@ export const ColorUtilities = () => (
     ))}
     {colors.map((color) => (
       <Utility
+        key={color}
         name={`has-background-${color}`}
         example={<div className={`has-background-${color}`} />}
       />
