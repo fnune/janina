@@ -1,0 +1,29 @@
+.story__utilities {
+  margin: 100px auto;
+  width: 600px;
+  max-width: 100%;
+
+  &__utility {
+    display: flex;
+    align-items: center;
+    min-height: 40px;
+
+    &__name {
+      flex: 1 1 auto;
+    }
+
+    &__example {
+      text-align: right;
+
+      [class*='has-background'] {
+        height: 30px;
+        width: 150px;
+        max-width: 100%;
+      }
+
+      * {
+        white-space: nowrap;
+      }
+    }
+  }
+}
