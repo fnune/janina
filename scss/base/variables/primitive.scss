@@ -21,38 +21,38 @@ $lightness-shade: -10% !default;
   @return color.adjust($color, $lightness: $lightness-shade, $saturation: $saturation-shade);
 }
 
-$black: #000 !default;
-$white: #fff !default;
+$black: hsl(0, 0, 0) !default;
+$white: hsl(0, 0, 100) !default;
 
-$dark: #2b2c34 !default;
+$dark: hsl(233, 9, 19) !default;
 $dark-tint: tint($dark) !default;
 $dark-shade: shade($dark) !default;
 
-$light: #d1d1e9 !default;
+$light: hsl(240, 35, 87) !default;
 $light-tint: tint($light) !default;
 $light-shade: shade($light) !default;
 
-$orange: #ff8e3c !default;
+$orange: hsl(25, 100, 62) !default;
 $orange-tint: tint($orange) !default;
 $orange-shade: shade($orange) !default;
 
-$red: #ff5470 !default;
+$red: hsl(350, 100, 66) !default;
 $red-tint: tint($red) !default;
 $red-shade: shade($red) !default;
 
-$blue: #6246ea !default;
+$blue: hsl(250, 80, 60) !default;
 $blue-tint: tint($blue) !default;
 $blue-shade: shade($blue) !default;
 
-$green: #00ebc7 !default;
+$green: hsl(171, 100, 46) !default;
 $green-tint: tint($green) !default;
 $green-shade: shade($green) !default;
 
-$purple: #b86bff !default;
+$purple: hsl(271, 100, 71) !default;
 $purple-tint: tint($purple) !default;
 $purple-shade: shade($purple) !default;
 
-$cyan: #3298dc !default;
+$cyan: hsl(204, 71, 53) !default;
 $cyan-tint: tint($cyan) !default;
 $cyan-shade: shade($cyan) !default;
 
