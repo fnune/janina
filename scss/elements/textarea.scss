@@ -1,0 +1,6 @@
+@import '../base/variables/all';
+
+.textarea {
+  @extend %base-input;
+  padding: $space-medium;
+}

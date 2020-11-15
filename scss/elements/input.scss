@@ -1,12 +1,9 @@
 @use '../base/variables/all';
 
-.input {
-  height: $control-size-medium;
-  line-height: $control-size-medium;
+%base-input {
   font-size: $font-size-base;
   outline: none;
-  transition: all $transition-speed ease;
-  padding: 0 $space-medium;
+  transition: border $transition-speed ease;
   border-radius: $border-radius-medium;
   color: $dark;
   border: 1px solid $light-tint;
@@ -17,6 +14,12 @@
 
   &:focus {
     border: 1px solid $primary-tint;
-    background-color: $white;
   }
+}
+
+.input {
+  @extend %base-input;
+  height: $control-size-medium;
+  line-height: $control-size-medium;
+  padding: 0 $space-medium;
 }

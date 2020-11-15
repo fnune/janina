@@ -4,7 +4,7 @@
   "description": "A work-in-progress CSS-only library",
   "main": "scss/janina.scss",
   "scripts": {
-    "format": "prettier --config=./.prettierrc --write .",
+    "format": "prettier --write .",
     "lint": "stylelint **/*.{css,scss}",
     "test": "echo No tests have been added yet 🤖",
     "build": "yarn build:clean && yarn build:scss && yarn build:autoprefix && yarn build:cleancss",
