@@ -13,6 +13,10 @@
     transition: all $transition-speed ease;
   }
 
+  .group {
+    padding-top: $space-tiny;
+  }
+
   &.horizontal {
     align-items: baseline;
     flex-direction: row;
@@ -26,8 +30,13 @@
 
     .input,
     .textarea,
-    .select {
+    .select,
+    .group {
       flex: 1 1 68%;
+    }
+
+    .group {
+      padding-top: 0;
     }
   }
 

@@ -1,0 +1,18 @@
+@import '../base/variables/all';
+
+.form {
+  .field,
+  .checkbox,
+  .radio {
+    margin-top: $space-large;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  .checkbox + .checkbox,
+  .radio + .radio {
+    margin-top: 0;
+  }
+}

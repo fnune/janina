@@ -19,6 +19,7 @@
 
 .input {
   @extend %base-input;
+
   height: $control-size-medium;
   line-height: $control-size-medium;
   padding: 0 $space-medium;
