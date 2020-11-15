@@ -3,6 +3,7 @@
 .field {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   font-size: $font-size-base;
 
   .label {
@@ -11,6 +12,13 @@
     padding-left: $space-tiny;
     padding-bottom: $space-tiny;
     transition: all $transition-speed ease;
+  }
+
+  .input,
+  .textarea,
+  .select,
+  .group {
+    width: 100%;
   }
 
   .group {

@@ -7,11 +7,13 @@
 .select {
   @extend %base-input;
 
+  $chevron-offset: $space-small;
+
   height: $control-size-medium;
   line-height: $control-size-medium;
-  padding: 0 $space-medium;
+  padding: 0 ($space-large + $chevron-offset) 0 $space-medium;
   cursor: pointer;
   appearance: none;
   background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#{rgb-format($light-shade)}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>')
-    no-repeat right $space-small center / 1.3em;
+    no-repeat right $chevron-offset center / 1.3em;
 }
