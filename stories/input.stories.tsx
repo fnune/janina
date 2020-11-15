@@ -7,7 +7,7 @@ export default {
 }
 
 export const Horizontal = () => (
-  <form className="story__inputs">
+  <form className="story__input">
     <label className="field horizontal" htmlFor="first-name">
       <span className="label">First name</span>
       <input id="first-name" placeholder="Jane" className="input" />
@@ -28,7 +28,7 @@ export const Horizontal = () => (
 )
 
 export const Vertical = () => (
-  <form className="story__inputs">
+  <form className="story__input">
     <label className="field" htmlFor="first-name">
       <span className="label">First name</span>
       <input id="first-name" placeholder="Jane" className="input" />

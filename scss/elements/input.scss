@@ -1,41 +1,5 @@
 @use '../base/variables/all';
 
-.field {
-  display: flex;
-  flex-direction: column;
-  font-size: $font-size-base;
-
-  .label {
-    font-size: $font-size-small;
-    color: $dark-tint;
-    padding-left: $space-tiny;
-    padding-bottom: $space-tiny;
-    transition: all $transition-speed ease;
-  }
-
-  &.horizontal {
-    align-items: baseline;
-    flex-direction: row;
-
-    .label {
-      font-size: $font-size-base;
-      flex: 1 1 32%;
-      padding: 0 $space-medium 0 0;
-      color: $dark-tint;
-    }
-
-    input {
-      flex: 1 1 68%;
-    }
-  }
-
-  &:focus-within {
-    .label {
-      color: $primary-tint;
-    }
-  }
-}
-
 .input {
   height: $control-size-medium;
   line-height: $control-size-medium;
