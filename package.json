@@ -13,7 +13,8 @@
     "build:clean": "rimraf css",
     "build:scss": "sass --style=expanded --source-map scss/janina.scss css/janina.css",
     "start": "yarn build:scss --watch",
-    "storybook": "start-storybook -p 6006 --ci"
+    "storybook": "start-storybook -p 6006 --ci",
+    "generate": "plop"
   },
   "engines": {
     "npm": "Please use yarn",
@@ -39,6 +40,7 @@
     "clean-css-cli": "^4.3.0",
     "clean-css-loader": "^2.0.0",
     "css-loader": "^5.0.1",
+    "plop": "^2.7.4",
     "postcss": "^8.1.7",
     "postcss-cli": "^8.2.0",
     "postcss-loader": "^4.0.4",

@@ -17,3 +17,4 @@ The typeface of choice is [Inter](https://github.com/rsms/inter).
 | `yarn build:cleancss`   | Minifies `css/janina.css` using [clean-css](https://github.com/jakubpawlowicz/clean-css) and outputs `css/janina.min.css` |
 | `yarn build:clean`      | Removes the `css` directory                                                                                               |
 | `yarn build:scss`       | Builds `css/janina.css` and `css/janina.css.map`                                                                          |
+| `yarn generate`         | Uses `plop` to generate new content in the project. See [`plopfile.js`](/plopfile.js)                                     |
